@@ -19,3 +19,14 @@
 .link:hover::before {
   scale: 1;
 }
+
+.link:active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ececec;
+  border-radius: 4px;
+}

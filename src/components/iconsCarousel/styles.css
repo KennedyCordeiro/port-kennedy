@@ -1,0 +1,17 @@
+.carousel-itens {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.carousel-itens img {
+  width: 30%;
+  object-fit: contain;
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
