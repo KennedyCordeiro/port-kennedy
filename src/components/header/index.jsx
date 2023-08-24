@@ -13,7 +13,7 @@ const Header = () => {
     "Front-end Developer",
     "Back-end Developer",
     "UI/UX Designer",
-    "Engenheiro de Software",
+    "Software Engineer",
   ];
   const period = 2000;
 
@@ -48,7 +48,7 @@ const Header = () => {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
       setNum(1);
-      setDelta(500);
+      setDelta(300);
     } else {
       setNum((prevNum) => prevNum + 1);
     }

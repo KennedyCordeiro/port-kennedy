@@ -6,7 +6,18 @@ const menuHeight = getComputedStyle(document.documentElement).getPropertyValue(
 );
 
 const buttons = ["Quem sou?", "Educação", "Front-End", "Experiências"];
-
+const textItens = [
+  { title: "Quem sou?", Text: "O rei do sexo" }, //redux.js.org/" },
+  { title: "Educação", Text: "Formado na universidade do sexo" }, //redux.js.org/" },
+  {
+    title: "Atuação no mercado",
+    Text: "Atuei em todos os cabarés possiveis e imaginaveis",
+  }, //redux.js.org/" },
+  {
+    title: "Front end",
+    Text: "Estou plenamente de minhas habilidadades no front end da putaria e de suas áreas de interesse",
+  }, //redux.js.org/" },
+];
 const Widgets = () => {
   const [activeBlock, setActiveBlock] = useState(0);
 
