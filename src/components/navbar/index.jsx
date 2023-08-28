@@ -1,13 +1,30 @@
-import { NavWrapper, NavLink } from "./Navbar.styled";
+import { NavWrapper, List, Link } from "./Navbar.styled";
 import "./styles.css";
 
 const Navbar = () => {
   return (
     <NavWrapper>
-      <NavLink className="link">Home</NavLink>
-      <NavLink className="link">Skills</NavLink>
-      <NavLink className="link">Portifólio</NavLink>
-      <NavLink className="link">Contact</NavLink>
+      <List className="list">
+        <Link href="#" className="link active">
+          Store
+        </Link>
+
+        <Link href="#" className="link">
+          Mac
+        </Link>
+
+        <Link href="#" className="link">
+          iPad
+        </Link>
+
+        <Link href="#" className="link">
+          iPhone
+        </Link>
+
+        <Link href="#" className="link">
+          Watch
+        </Link>
+      </List>
     </NavWrapper>
   );
 };

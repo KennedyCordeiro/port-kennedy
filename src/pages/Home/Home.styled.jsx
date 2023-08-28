@@ -9,10 +9,10 @@ export const Container = styled.div`
   background-image: url(${Back});
   background-position: center;
   gap: 10px;
+  flex-direction: column;
 `;
 
 export const NavbarContainer = styled.div`
-  display: flex;
   align-items: center;
   height: 10%;
   width: 100%;
@@ -24,7 +24,7 @@ export const NavbarContainer = styled.div`
 export const Column = styled.div`
   flex: 1;
   position: relative;
-  display: flex;
+
   justify-content: center;
 `;
 

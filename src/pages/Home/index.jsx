@@ -16,7 +16,7 @@ const Home = () => {
       <C.NavbarContainer>
         <Navbar></Navbar>
       </C.NavbarContainer>
-      <C.Column> </C.Column>
+      <C.Column />
 
       <C.Column>
         <C.MidSection>
