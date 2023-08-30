@@ -5,13 +5,13 @@ export const NavWrapper = styled.nav`
   top: 0;
   left: 0;
   height: 60px;
-  width: 50%;
+
   display: flex;
   gap: 20px;
   align-items: center;
-  justify-content: center;
-  padding-right: 9px;
-  background: transparent;
+  justify-content: end;
+  padding-right: 40px;
+  background: none;
   font-family: "Euclid Circular A", "Poppins";
 `;
 
@@ -36,7 +36,7 @@ export const Link = styled.a`
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #0561ee;
+    background-color: #483285;
     transform: scaleX(0);
     transition: transform 0.25s;
   }

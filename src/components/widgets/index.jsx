@@ -1,10 +1,6 @@
 import { useState } from "react";
 import "./styles.css";
 
-const menuHeight = getComputedStyle(document.documentElement).getPropertyValue(
-  "--menu-height"
-);
-
 const textItens = [
   { title: "Quem sou?", text: "O rei do sexo" }, //redux.js.org/" },
   { title: "Educação", text: "Formado na universidade do sexo" }, //redux.js.org/" },
@@ -38,18 +34,9 @@ const Widgets = () => {
         ))}
       </div>
       <div className="wrapper">
-        <div
-          className="content"
-          style={{ translate: `0 calc(0px - ${menuHeight} * ${activeBlock})` }}
-        >
+        <div>
           {textItens.map(
-            (text, index) =>
-              activeBlock === index && (
-                <div className="block">
-                  <h2>{text.title}</h2>
-                  <p>{text.text}</p>
-                </div>
-              )
+            (text, index) => activeBlock === index && <h1>text</h1>
           )}
         </div>
       </div>
