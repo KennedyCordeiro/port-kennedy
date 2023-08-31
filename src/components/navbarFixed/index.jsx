@@ -1,18 +1,37 @@
-import { NavWrapper, List, StyledLink } from "./Navbar.styled";
+import { NavWrapper, List, StyledLink, NavContainer } from "./Navbar.styled";
 import { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
+import MenuIcon from "../menuIcon";
 
 const NavbarFixed = () => {
-  const [activeLink, setActiveLink] = useState("Home");
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const sections = [
+    { id: "Home", label: "Home" },
+    { id: "Skills", label: "Skills" },
+    { id: "About", label: "About" },
+    { id: "Contact", label: "Contact" },
+  ];
 
-  const handleLinkClick = (link) => {
+  const [activeLink, setActiveLink] = useState("Home");
+
+  const handleSetActiveLink = (link) => {
     setActiveLink(link);
   };
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollPosition(window.scrollY);
+      const scrollPosition = window.scrollY;
+
+      sections.forEach((section) => {
+        const sectionElement = document.getElementById(section.id);
+
+        if (
+          scrollPosition >= sectionElement.offsetTop - 100 &&
+          scrollPosition <
+            sectionElement.offsetTop + sectionElement.offsetHeight - 100
+        ) {
+          handleSetActiveLink(section.id);
+        }
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -23,43 +42,28 @@ const NavbarFixed = () => {
 
   return (
     <NavWrapper>
-      <List>
-        <ScrollLink
-          to="Home"
-          spy={true}
-          smooth={true}
-          offset={-60}
-          duration={500}
-          className={activeLink === "Home" ? "link active" : "link"}
-          onClick={() => handleLinkClick("Home")}
-        >
-          Home
-        </ScrollLink>
-
-        <StyledLink
-          href="#Skills"
-          className={activeLink === "Skills" ? "link active" : "link"}
-          onClick={() => handleLinkClick("Skills")}
-        >
-          Skills
-        </StyledLink>
-
-        <StyledLink
-          href="#"
-          className={activeLink === "About" ? "link active" : "link"}
-          onClick={() => handleLinkClick("About")}
-        >
-          About
-        </StyledLink>
-
-        <StyledLink
-          href="#"
-          className={activeLink === "Contact" ? "link active" : "link"}
-          onClick={() => handleLinkClick("Contact")}
-        >
-          Contact
-        </StyledLink>
-      </List>
+      <NavContainer>
+        <List>
+          {sections.map((section) => (
+            <ScrollLink
+              key={section.id}
+              to={section.id}
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              onClick={() => handleSetActiveLink(section.id)}
+            >
+              <StyledLink
+                className={activeLink === section.id ? "link active" : "link"}
+              >
+                {section.label}
+              </StyledLink>
+            </ScrollLink>
+          ))}
+          <MenuIcon></MenuIcon>
+        </List>
+      </NavContainer>
     </NavWrapper>
   );
 };

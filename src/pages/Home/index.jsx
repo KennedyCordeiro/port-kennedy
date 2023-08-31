@@ -8,7 +8,7 @@ import ButtonCur from "../../components/buttonCur";
 const Home = () => {
   const DownloadCurriculum = () => {
     const curriculumUrl =
-      "https://drive.google.com/file/d/1sA-EszQLafy3JY5d13hfT1aG-g-VRBe1/view?usp=drive_link";
+      "https://drive.google.com/file/d/1sA-EszQLafy3JY5d13hfT1aG-g-VRBe1/view?usp=sharing";
     window.open(curriculumUrl, "_blank");
   };
 

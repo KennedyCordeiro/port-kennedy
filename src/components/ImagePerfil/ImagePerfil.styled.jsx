@@ -2,5 +2,5 @@ import { styled } from "styled-components";
 
 export const DivImage = styled.div`
   margin-bottom: 30px;
-  margin-top: 30px;
+  margin-top: 80px;
 `;

@@ -5,16 +5,22 @@ export const NavWrapper = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-  margin: 50px;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  justify-content: end;
-  background: none;
-  padding-right: 80px;
+  height: 60px;
   font-family: "Euclid Circular A", "Poppins";
-  position: sticky;
+  position: fixed;
   z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: transparent;
+`;
+
+export const NavContainer = styled.div`
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-right: 100px;
+  margin-top: 20px;
 `;
 
 export const List = styled.ul`

@@ -3,57 +3,25 @@ import "./App.css";
 import Home from "./pages/Home";
 import Skills from "./pages/Skills";
 import About from "./pages/About";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/all";
 import NavbarFixed from "./components/navbarFixed";
 
 function App() {
-  const { innerHeight } = window;
-
-  const getRatio = (el) => innerHeight / (innerHeight + el.offsetHeight);
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.utils.toArray("section").forEach((section, i) => {
-      section.bg = section.querySelector(".bg");
-
-      gsap.fromTo(
-        section.bg,
-        {
-          backgroundPosition: () =>
-            i ? `50% ${-innerHeight * getRatio(section)}px` : "50% 0px",
-        },
-        {
-          backgroundPosition: () =>
-            `50% ${innerHeight * (1 - getRatio(section))}px`,
-          ease: "none",
-          scrollTrigger: {
-            trigger: section,
-            start: () => (i ? "top bottom" : "top top"),
-            end: "bottom top",
-            scrub: true,
-          },
-        }
-      );
-    });
-  }, []);
-
   return (
     <>
-      <NavbarFixed
-        style={{ paddingRight: "40px", marginRight: "39px" }}
-      ></NavbarFixed>
-      <section>
+      <NavbarFixed></NavbarFixed>
+      <section id="Home">
         <Home></Home>
       </section>
 
-      <section href="#Skills">
+      <section id="Skills">
         <Skills></Skills>
       </section>
 
-      <section>
+      <section id="About">
         <About></About>
       </section>
+
+      <section id="Contact"></section>
     </>
   );
 }

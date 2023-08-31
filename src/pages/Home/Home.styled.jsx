@@ -9,6 +9,7 @@ export const Container = styled.div`
   background-image: url(${Back});
   background-position: center;
   gap: 10px;
+  width: 100%;
   flex-direction: column;
   align-items: end;
 `;
