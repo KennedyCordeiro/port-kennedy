@@ -4,8 +4,7 @@ import * as C from "./Home.styled";
 import NavIcons from "../../components/navIcons";
 import ImagePerfil from "../../components/ImagePerfil";
 import ButtonCur from "../../components/buttonCur";
-import { Container } from "react-bootstrap";
-import { Navbar } from "react-bootstrap";
+
 const Home = () => {
   const DownloadCurriculum = () => {
     const curriculumUrl =
@@ -15,26 +14,19 @@ const Home = () => {
 
   return (
     <>
-      <Navbar bg="transparent" expand="lg">
-        <Container>
-          <C.Container>
-            <C.NavbarContainer></C.NavbarContainer>
-            <C.Column>
-              <C.MidSection>
-                <ImagePerfil></ImagePerfil>
-                <C.Itens>
-                  <Header></Header>
-                </C.Itens>
-                <NavIcons></NavIcons>
-                <ButtonCur
-                  onClickButton={DownloadCurriculum}
-                  text="Acessar Curriculo"
-                ></ButtonCur>
-              </C.MidSection>
-            </C.Column>
-          </C.Container>
-        </Container>
-      </Navbar>
+      <C.Container>
+        <C.MidSection>
+          <ImagePerfil></ImagePerfil>
+          <C.Itens>
+            <Header></Header>
+          </C.Itens>
+          <NavIcons></NavIcons>
+          <ButtonCur
+            onClickButton={DownloadCurriculum}
+            text="Acessar Curriculo"
+          ></ButtonCur>
+        </C.MidSection>
+      </C.Container>
     </>
   );
 };

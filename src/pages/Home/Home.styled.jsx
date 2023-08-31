@@ -10,6 +10,7 @@ export const Container = styled.div`
   background-position: center;
   gap: 10px;
   flex-direction: column;
+  align-items: end;
 `;
 
 export const NavbarContainer = styled.div`
@@ -33,6 +34,7 @@ export const MidSection = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-right: 80px;
 `;
 
 export const Itens = styled.div`

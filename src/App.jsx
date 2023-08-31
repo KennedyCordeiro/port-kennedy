@@ -5,8 +5,7 @@ import Skills from "./pages/Skills";
 import About from "./pages/About";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { Navbar, Container } from "react-bootstrap";
-import { NavbarFixed } from "./components/navbarFixed";
+import NavbarFixed from "./components/navbarFixed";
 
 function App() {
   const { innerHeight } = window;
@@ -41,9 +40,9 @@ function App() {
 
   return (
     <>
-      <Navbar expand="lg">
-        <NavbarFixed></NavbarFixed>
-      </Navbar>
+      <NavbarFixed
+        style={{ paddingRight: "40px", marginRight: "39px" }}
+      ></NavbarFixed>
       <section>
         <Home></Home>
       </section>

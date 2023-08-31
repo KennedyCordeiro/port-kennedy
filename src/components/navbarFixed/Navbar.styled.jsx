@@ -1,18 +1,20 @@
-import React from "react";
+// Navbar.styled.js
 import styled from "styled-components";
 
 export const NavWrapper = styled.nav`
   top: 0;
   left: 0;
-  height: 60px;
-
+  width: 100%;
+  margin: 50px;
   display: flex;
   gap: 20px;
   align-items: center;
   justify-content: end;
-  padding-right: 40px;
   background: none;
+  padding-right: 80px;
   font-family: "Euclid Circular A", "Poppins";
+  position: sticky;
+  z-index: 1000;
 `;
 
 export const List = styled.ul`
@@ -22,7 +24,7 @@ export const List = styled.ul`
   gap: 40px;
 `;
 
-export const Link = styled.a`
+export const StyledLink = styled.a`
   position: relative;
   display: inline-block;
   text-decoration: none;
