@@ -11,6 +11,12 @@ const NavbarFixed = () => {
     { id: "Contact", label: "Contact" },
   ];
 
+  const [isChecked, setIsChecked] = useState(false);
+
+  const toggleCheckbox = () => {
+    setIsChecked(!isChecked);
+  };
+
   const [activeLink, setActiveLink] = useState("Home");
 
   const handleSetActiveLink = (link) => {
@@ -61,8 +67,8 @@ const NavbarFixed = () => {
               </StyledLink>
             </ScrollLink>
           ))}
-          <MenuIcon></MenuIcon>
         </List>
+        <MenuIcon className="menuIcon"></MenuIcon>
       </NavContainer>
     </NavWrapper>
   );
