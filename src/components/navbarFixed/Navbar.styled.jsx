@@ -21,6 +21,10 @@ export const NavContainer = styled.div`
   align-items: center;
   margin-right: 100px;
   margin-top: 20px;
+
+  @media screen and (max-width: 900px) {
+    margin-right: 20px;
+  }
 `;
 
 export const List = styled.ul`
@@ -28,6 +32,9 @@ export const List = styled.ul`
   display: flex;
   align-items: center;
   gap: 40px;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 `;
 
 export const StyledLink = styled.a`

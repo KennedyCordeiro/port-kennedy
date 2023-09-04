@@ -49,7 +49,7 @@ const NavbarFixed = () => {
   return (
     <NavWrapper>
       <NavContainer>
-        <List>
+        <List className="list-nav">
           {sections.map((section) => (
             <ScrollLink
               key={section.id}
