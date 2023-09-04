@@ -12,6 +12,10 @@ export const Container = styled.div`
   width: 100%;
   flex-direction: column;
   align-items: end;
+
+  @media screen and (max-width: 900px) {
+    align-items: center;
+  }
 `;
 
 export const NavbarContainer = styled.div`
@@ -36,6 +40,10 @@ export const MidSection = styled.div`
   align-items: center;
   flex-direction: column;
   margin-right: 80px;
+
+  @media screen and (max-width: 900px) {
+    margin-right: 0px;
+  }
 `;
 
 export const Itens = styled.div`

@@ -73,3 +73,12 @@ export const StyledLink = styled.a`
     transform: scaleX(1);
   }
 `;
+
+export const IconMenu = styled.div`
+  display: none;
+  @media screen and (max-width: 900px) {
+    display: flex;
+    margin-right: 2px;
+    position: absolute;
+  }
+`;

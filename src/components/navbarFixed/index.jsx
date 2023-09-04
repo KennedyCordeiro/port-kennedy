@@ -1,4 +1,10 @@
-import { NavWrapper, List, StyledLink, NavContainer } from "./Navbar.styled";
+import {
+  NavWrapper,
+  List,
+  IconMenu,
+  StyledLink,
+  NavContainer,
+} from "./Navbar.styled";
 import { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import MenuIcon from "../menuIcon";
@@ -68,7 +74,9 @@ const NavbarFixed = () => {
             </ScrollLink>
           ))}
         </List>
-        <MenuIcon className="menuIcon"></MenuIcon>
+        <IconMenu>
+          <MenuIcon className="menuIcon"></MenuIcon>
+        </IconMenu>
       </NavContainer>
     </NavWrapper>
   );
