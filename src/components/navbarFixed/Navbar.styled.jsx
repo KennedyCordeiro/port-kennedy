@@ -1,5 +1,6 @@
 // Navbar.styled.js
 import styled from "styled-components";
+import { Link as ScrollLink } from "react-scroll";
 
 export const NavWrapper = styled.nav`
   top: 0;
@@ -13,17 +14,30 @@ export const NavWrapper = styled.nav`
   justify-content: flex-end;
   align-items: center;
   background-color: transparent;
+
+  @media screen and (max-width: 900px) {
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff59;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    backdrop-filter: blur(7px);
+  }
 `;
 
 export const NavContainer = styled.div`
   display: flex;
   justify-content: end;
   align-items: center;
-  margin-right: 100px;
+  margin-right: 80px;
   margin-top: 20px;
-
   @media screen and (max-width: 900px) {
-    margin-right: 20px;
+    margin-right: 0px;
+    margin-top: 0px;
   }
 `;
 
@@ -37,7 +51,37 @@ export const List = styled.ul`
   }
 `;
 
-export const StyledLink = styled.a`
+export const DivIcon = styled.div`
+  display: none;
+  @media screen and (max-width: 900px) {
+    margin-right: 20px;
+    position: absolute;
+    display: flex;
+    top: 20px;
+    right: 20px;
+  }
+`;
+
+export const NavIconsSmart = styled.div`
+  display: none;
+  @media screen and (max-width: 900px) {
+    gap: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+
+    &.active {
+    }
+
+    &.active::after {
+      transform: scaleX(1);
+    }
+  }
+`;
+
+export const StyledLink = styled(ScrollLink)`
   position: relative;
   display: inline-block;
   text-decoration: none;
@@ -71,14 +115,5 @@ export const StyledLink = styled.a`
   &.active::before,
   &.active::after {
     transform: scaleX(1);
-  }
-`;
-
-export const IconMenu = styled.div`
-  display: none;
-  @media screen and (max-width: 900px) {
-    display: flex;
-    margin-right: 2px;
-    position: absolute;
   }
 `;

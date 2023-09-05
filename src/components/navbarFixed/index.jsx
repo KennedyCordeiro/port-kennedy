@@ -1,9 +1,10 @@
 import {
   NavWrapper,
   List,
-  IconMenu,
+  DivIcon,
   StyledLink,
   NavContainer,
+  NavIconsSmart,
 } from "./Navbar.styled";
 import { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
@@ -16,17 +17,17 @@ const NavbarFixed = () => {
     { id: "About", label: "About" },
     { id: "Contact", label: "Contact" },
   ];
-
-  const [isChecked, setIsChecked] = useState(false);
-
-  const toggleCheckbox = () => {
-    setIsChecked(!isChecked);
-  };
+  const [menuSmart, setMenuSmart] = useState(false);
 
   const [activeLink, setActiveLink] = useState("Home");
 
   const handleSetActiveLink = (link) => {
     setActiveLink(link);
+  };
+
+  const handleMenuSmart = () => {
+    console.log(menuSmart);
+    setMenuSmart(!menuSmart);
   };
 
   useEffect(() => {
@@ -55,9 +56,9 @@ const NavbarFixed = () => {
   return (
     <NavWrapper>
       <NavContainer>
-        <List className="list-nav">
+        <List>
           {sections.map((section) => (
-            <ScrollLink
+            <StyledLink
               key={section.id}
               to={section.id}
               spy={true}
@@ -66,18 +67,33 @@ const NavbarFixed = () => {
               duration={500}
               onClick={() => handleSetActiveLink(section.id)}
             >
-              <StyledLink
-                className={activeLink === section.id ? "link active" : "link"}
-              >
-                {section.label}
-              </StyledLink>
-            </ScrollLink>
+              {section.label}
+            </StyledLink>
           ))}
         </List>
-        <IconMenu>
-          <MenuIcon className="menuIcon"></MenuIcon>
-        </IconMenu>
       </NavContainer>
+
+      <DivIcon>
+        <MenuIcon onClick={() => handleMenuSmart()}></MenuIcon>
+      </DivIcon>
+
+      <NavIconsSmart>
+        {sections.map((section) => (
+          <StyledLink
+            key={section.id}
+            to={section.id}
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            onClick={() => handleSetActiveLink(section.id)}
+            style={menuSmart ? "" : { display: "none" }}
+            className={activeLink === section.id ? "link active" : "link"}
+          >
+            {section.label}
+          </StyledLink>
+        ))}
+      </NavIconsSmart>
     </NavWrapper>
   );
 };

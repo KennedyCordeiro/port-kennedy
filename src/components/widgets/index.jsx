@@ -1,18 +1,19 @@
 import { useState } from "react";
 import "./styles.css";
 
-const textItens = [
-  { title: "Quem sou?", text: "O rei do sexo" }, //redux.js.org/" },
-  { title: "Educação", text: "Formado na universidade do sexo" }, //redux.js.org/" },
+const textItems = [
+  { title: "Quem sou?", text: "O rei do sexo" },
+  { title: "Educação", text: "Formado na universidade do sexo" },
   {
     title: "Mercado",
-    text: "Atuei em todos os cabarés possiveis e imaginaveis",
-  }, //redux.js.org/" },
+    text: "Atuei em todos os cabarés possíveis e imagináveis",
+  },
   {
     title: "Front end",
-    text: "Estou plenamente de minhas habilidadades no front end da putaria e de suas áreas de interesse",
-  }, //redux.js.org/" },
+    text: "Estou plenamente de minhas habilidades no front end da putaria e de suas áreas de interesse",
+  },
 ];
+
 const Widgets = () => {
   const [activeBlock, setActiveBlock] = useState(0);
 
@@ -23,9 +24,9 @@ const Widgets = () => {
   return (
     <article className="card">
       <div className="buttons">
-        {textItens.map((text, index) => (
+        {textItems.map((text, index) => (
           <button
-            key={index}
+            key={text.title} // Use o título como a chave única
             className={index === activeBlock ? "active" : ""}
             onClick={() => toggleMenuBlock(index)}
           >
@@ -35,8 +36,9 @@ const Widgets = () => {
       </div>
       <div className="wrapper">
         <div>
-          {textItens.map(
-            (text, index) => activeBlock === index && <h1>text</h1>
+          {textItems.map(
+            (text, index) =>
+              activeBlock === index && <h1 key={text.title}>{text.text}</h1>
           )}
         </div>
       </div>
