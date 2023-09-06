@@ -1,10 +1,10 @@
 import { useState } from "react";
 import "./styles.css";
 
-const ToggleIcon = () => {
+const ToggleIcon = ({ HandleMenu }) => {
   return (
     <div className="iconMenu">
-      <input id="checkbox" type="checkbox" />
+      <input id="checkbox" type="checkbox" onClick={HandleMenu} />
       <label className="toggle" htmlFor="checkbox">
         <div id="bar1" className="bars"></div>
         <div id="bar2" className="bars"></div>

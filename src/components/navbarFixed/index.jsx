@@ -7,7 +7,6 @@ import {
   NavIconsSmart,
 } from "./Navbar.styled";
 import { useState, useEffect } from "react";
-import { Link as ScrollLink } from "react-scroll";
 import MenuIcon from "../menuIcon";
 
 const NavbarFixed = () => {
@@ -21,13 +20,14 @@ const NavbarFixed = () => {
 
   const [activeLink, setActiveLink] = useState("Home");
 
-  const handleSetActiveLink = (link) => {
-    setActiveLink(link);
+  const handleSmartMenu = () => {
+    setMenuSmart((prevState) => {
+      !prevState;
+    });
   };
 
-  const handleMenuSmart = () => {
-    console.log(menuSmart);
-    setMenuSmart(!menuSmart);
+  const handleSetActiveLink = (link) => {
+    setActiveLink(link);
   };
 
   useEffect(() => {
@@ -74,26 +74,29 @@ const NavbarFixed = () => {
       </NavContainer>
 
       <DivIcon>
-        <MenuIcon onClick={() => handleMenuSmart()}></MenuIcon>
+        <MenuIcon
+          HandleMenu={() => setMenuSmart((prevState) => !prevState)}
+        ></MenuIcon>
       </DivIcon>
 
-      <NavIconsSmart>
-        {sections.map((section) => (
-          <StyledLink
-            key={section.id}
-            to={section.id}
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-            onClick={() => handleSetActiveLink(section.id)}
-            style={menuSmart ? "" : { display: "none" }}
-            className={activeLink === section.id ? "link active" : "link"}
-          >
-            {section.label}
-          </StyledLink>
-        ))}
-      </NavIconsSmart>
+      {menuSmart && (
+        <NavIconsSmart>
+          {sections.map((section) => (
+            <StyledLink
+              key={section.id}
+              to={section.id}
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              onClick={() => handleSetActiveLink(section.id)}
+              className={activeLink === section.id ? "link active" : "link"}
+            >
+              {section.label}
+            </StyledLink>
+          ))}
+        </NavIconsSmart>
+      )}
     </NavWrapper>
   );
 };

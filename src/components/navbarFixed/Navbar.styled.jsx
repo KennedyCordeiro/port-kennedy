@@ -1,6 +1,18 @@
 // Navbar.styled.js
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Link as ScrollLink } from "react-scroll";
+
+const showMenu = keyframes`
+  from{ 
+    opacity: 0;
+    width: 0;
+  }
+  to{
+
+    opacity: 1;
+    width:100%;
+  }
+`;
 
 export const NavWrapper = styled.nav`
   top: 0;
@@ -25,7 +37,7 @@ export const NavWrapper = styled.nav`
     justify-content: center;
     flex-direction: column;
     position: fixed;
-    backdrop-filter: blur(7px);
+    backdrop-filter: blur(20px);
   }
 `;
 
@@ -65,19 +77,16 @@ export const DivIcon = styled.div`
 export const NavIconsSmart = styled.div`
   display: none;
   @media screen and (max-width: 900px) {
-    gap: 25px;
+    translate: 0 0;
+    gap: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position: absolute;
-
-    &.active {
-    }
-
-    &.active::after {
-      transform: scaleX(1);
-    }
+    transition: 0.5s;
+    animation: showMenu 4s;
+    font-size: 22px;
   }
 `;
 
