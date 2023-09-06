@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   background-color: #f2f2f2;
-  height: auto;
+  height: 100vh;
   background-image: url(${Back});
   background-position: center;
   gap: 10px;

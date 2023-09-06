@@ -4,6 +4,8 @@ import icon2 from "../../assets/Images/icon2.svg";
 import icon3 from "../../assets/Images/icon3.svg";
 import icon4 from "../../assets/Images/icon4.svg";
 import icon5 from "../../assets/Images/icon5.svg";
+import icon6 from "../../assets/Images/icon6.svg";
+
 import "./styles.css";
 
 const IconsCarousel = () => {
@@ -21,6 +23,11 @@ const IconsCarousel = () => {
     },
     { image: icon4, alt: "Github", url: "https://github.com/kennedyCordeiro" },
     { image: icon5, alt: "React-JS", url: "https://reactjs.org" },
+    {
+      image: icon6,
+      alt: ".Net Framework",
+      url: "https://dotnet.microsoft.com/pt-br/",
+    },
   ];
 
   return (

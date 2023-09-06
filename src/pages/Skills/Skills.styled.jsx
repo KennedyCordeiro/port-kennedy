@@ -13,7 +13,6 @@ export const DivSkills = styled.div`
 
   @media screen and (max-width: 900px) {
     padding-bottom: 5px;
-    height: auto;
   }
 `;
 
