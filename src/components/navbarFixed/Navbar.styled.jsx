@@ -2,18 +2,6 @@
 import styled, { keyframes } from "styled-components";
 import { Link as ScrollLink } from "react-scroll";
 
-const showMenu = keyframes`
-  from{ 
-    opacity: 0;
-    width: 0;
-  }
-  to{
-
-    opacity: 1;
-    width:100%;
-  }
-`;
-
 export const NavWrapper = styled.nav`
   top: 0;
   left: 0;
@@ -26,18 +14,7 @@ export const NavWrapper = styled.nav`
   justify-content: flex-end;
   align-items: center;
   background-color: transparent;
-
   @media screen and (max-width: 900px) {
-    top: 0px;
-    width: 100%;
-    height: 100vh;
-    background-color: #ffffff59;
-    gap: 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    position: fixed;
-    backdrop-filter: blur(20px);
   }
 `;
 
@@ -71,22 +48,57 @@ export const DivIcon = styled.div`
     display: flex;
     top: 20px;
     right: 20px;
+    z-index: 1;
   }
 `;
 
 export const NavIconsSmart = styled.div`
   display: none;
   @media screen and (max-width: 900px) {
-    translate: 0 0;
+    opacity: ${(props) => (props.menuSmart ? "1" : "0")};
+    transform: translateY(${(props) => (props.menuSmart ? "0" : "-100%")});
+    transition: opacity 0.5s ease-in-out;
+
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: #27272758;
+    gap: 20px;
+    flex-direction: column;
+    position: fixed;
+    backdrop-filter: blur(20px);
+    animation: ${(props) =>
+      props.menuSmart
+        ? " showMenu 0.5s ease-in-out"
+        : "hideMenu 0.5s ease-in-out"};
+    //visibility: ${(props) => (props.menuSmart ? "visible" : "hidden")};
     gap: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     position: absolute;
     transition: 0.5s;
-    animation: showMenu 4s;
+
     font-size: 22px;
+  }
+
+  @keyframes showMenu {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  @keyframes hideMenu {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
   }
 `;
 

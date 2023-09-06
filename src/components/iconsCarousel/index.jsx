@@ -27,15 +27,7 @@ const IconsCarousel = () => {
     <div className="carousel-itens">
       {carouselItems.map((item, index) => (
         <div key={index} className="img" onClick={() => onClickImage(item.url)}>
-          <img
-            style={
-              item.alt === "React-JS"
-                ? { cursor: "pointer", width: "48%" }
-                : { cursor: "pointer" }
-            }
-            src={item.image}
-            alt={item.alt}
-          />
+          <img src={item.image} alt={item.alt} />
         </div>
       ))}
     </div>

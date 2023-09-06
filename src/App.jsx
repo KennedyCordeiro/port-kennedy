@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Skills from "./pages/Skills";
 import About from "./pages/About";
 import NavbarFixed from "./components/navbarFixed";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -21,7 +22,9 @@ function App() {
         <About></About>
       </section>
 
-      <section id="Contact"></section>
+      <section id="Contact">
+        <Contact></Contact>
+      </section>
     </>
   );
 }

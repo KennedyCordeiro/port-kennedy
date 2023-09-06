@@ -20,12 +20,6 @@ const NavbarFixed = () => {
 
   const [activeLink, setActiveLink] = useState("Home");
 
-  const handleSmartMenu = () => {
-    setMenuSmart((prevState) => {
-      !prevState;
-    });
-  };
-
   const handleSetActiveLink = (link) => {
     setActiveLink(link);
   };
@@ -79,24 +73,24 @@ const NavbarFixed = () => {
         ></MenuIcon>
       </DivIcon>
 
-      {menuSmart && (
-        <NavIconsSmart>
-          {sections.map((section) => (
-            <StyledLink
-              key={section.id}
-              to={section.id}
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              onClick={() => handleSetActiveLink(section.id)}
-              className={activeLink === section.id ? "link active" : "link"}
-            >
-              {section.label}
-            </StyledLink>
-          ))}
-        </NavIconsSmart>
-      )}
+      <NavIconsSmart as="div" menuSmart={menuSmart}>
+        {sections.map((section) => (
+          <StyledLink
+            key={section.id}
+            to={section.id}
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            onClick={() => {
+              handleSetActiveLink(section.id);
+            }}
+            className={activeLink === section.id ? "link active" : "link"}
+          >
+            {section.label}
+          </StyledLink>
+        ))}
+      </NavIconsSmart>
     </NavWrapper>
   );
 };

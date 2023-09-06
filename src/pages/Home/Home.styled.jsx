@@ -5,16 +5,28 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   background-color: #f2f2f2;
-  height: 100vh;
+  height: auto;
   background-image: url(${Back});
   background-position: center;
   gap: 10px;
   width: 100%;
   flex-direction: column;
   align-items: end;
-
+  animation: fadeIn 0.7s ease-in-out;
+  padding-bottom: 10px;
   @media screen and (max-width: 900px) {
     align-items: center;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 `;
 

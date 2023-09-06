@@ -9,11 +9,21 @@ export const DivSkills = styled.div`
   flex-direction: column;
   align-items: center;
   font-family: "Joker One", sans-serif;
+  padding-bottom: 15px;
+
+  @media screen and (max-width: 900px) {
+    padding-bottom: 5px;
+    height: auto;
+  }
 `;
 
 export const Title = styled.p`
-  font-size: 60px;
-  margin-bottom: 30px;
+  font-size: 78px;
+  margin-bottom: 10px;
   display: flex;
   margin-top: 10px;
+
+  @media screen and (max-width: 900px) {
+    font-size: 60px;
+  }
 `;
