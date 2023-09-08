@@ -1,0 +1,19 @@
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(5px);
+  transform: translate(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transtion: none;
+  }
+}

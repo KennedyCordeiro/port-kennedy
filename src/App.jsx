@@ -5,24 +5,23 @@ import Skills from "./pages/Skills";
 import About from "./pages/About";
 import NavbarFixed from "./components/navbarFixed";
 import Contact from "./pages/Contact";
+import ObserverComponent from "./components/observerComponent";
 
 function App() {
   return (
     <>
-      <NavbarFixed></NavbarFixed>
-      <section id="Home">
+      <NavbarFixed />
+      <ObserverComponent />
+      <section id="Home" className="hidden">
         <Home></Home>
       </section>
-
-      <section id="Skills">
+      <section id="Skills" className="hidden">
         <Skills></Skills>
       </section>
-
-      <section id="About">
+      <section id="About" className="hidden">
         <About></About>
       </section>
-
-      <section id="Contact">
+      <section id="Contact" className="hidden">
         <Contact></Contact>
       </section>
     </>

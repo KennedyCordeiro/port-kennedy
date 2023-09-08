@@ -1,3 +1,4 @@
+import InputStyled from "../../components/InputStyled";
 import GithubButton from "../../components/gitHubButton";
 import * as C from "./Contact.styled";
 import { useState } from "react";
@@ -32,6 +33,7 @@ const Contact = () => {
             <li>kennedy.engsoftware@gmail.com</li>
           </ul>
           <GithubButton></GithubButton>
+          <InputStyled></InputStyled>
         </C.AddressDiv>
       </C.MidSection>
     </C.Container>

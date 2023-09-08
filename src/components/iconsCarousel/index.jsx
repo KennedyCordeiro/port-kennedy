@@ -31,10 +31,14 @@ const IconsCarousel = () => {
   ];
 
   return (
-    <div className="carousel-itens">
+    <div className="carousel-itens hidden">
       {carouselItems.map((item, index) => (
         <div key={index} className="img" onClick={() => onClickImage(item.url)}>
           <img src={item.image} alt={item.alt} />
+
+          <div className="img-description">
+            <span>{item.alt}</span>
+          </div>
         </div>
       ))}
     </div>
