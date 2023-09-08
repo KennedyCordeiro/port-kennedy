@@ -4,7 +4,7 @@ import * as C from "./Skills.styled";
 const Skills = () => {
   return (
     <C.DivSkills>
-      <C.Title>Skills</C.Title>
+      <C.Title> Skills</C.Title>
       <IconsCarousel></IconsCarousel>
     </C.DivSkills>
   );

@@ -17,7 +17,7 @@ const NavbarFixed = () => {
     { id: "Contact", label: "Contact" },
   ];
   const [menuSmart, setMenuSmart] = useState(false);
-
+  const [isScrolled, setIsScrolled] = useState(false);
   const [activeLink, setActiveLink] = useState("Home");
 
   const handleSetActiveLink = (link) => {
@@ -30,6 +30,11 @@ const NavbarFixed = () => {
 
       sections.forEach((section) => {
         const sectionElement = document.getElementById(section.id);
+        if (scrollPosition > 100) {
+          setIsScrolled(true);
+        } else {
+          setIsScrolled(false);
+        }
 
         if (
           scrollPosition >= sectionElement.offsetTop - 100 &&
@@ -48,7 +53,7 @@ const NavbarFixed = () => {
   }, []);
 
   return (
-    <NavWrapper>
+    <NavWrapper className={isScrolled ? "black-background" : ""}>
       <NavContainer>
         <List>
           {sections.map((section) => (

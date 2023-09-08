@@ -1,7 +1,6 @@
-import InputStyled from "../../components/InputStyled";
-import GithubButton from "../../components/gitHubButton";
 import * as C from "./Contact.styled";
 import { useState } from "react";
+import LocationIcon from "../../assets/Images/location.svg";
 
 const Contact = () => {
   const [translate, setTranslate] = useState(false);
@@ -23,18 +22,9 @@ const Contact = () => {
   };
   return (
     <C.Container>
-      <C.TitleDiv>Contact</C.TitleDiv>
       <C.MidSection>
-        <C.Paragraph>{getText()}</C.Paragraph>
-        <C.AddressDiv>
-          <ul>
-            <li>Brasil</li>
-            <li>Ceará 088</li>
-            <li>kennedy.engsoftware@gmail.com</li>
-          </ul>
-          <GithubButton></GithubButton>
-          <InputStyled></InputStyled>
-        </C.AddressDiv>
+        {" "}
+        <C.TitleDiv>Contact</C.TitleDiv>
       </C.MidSection>
     </C.Container>
   );

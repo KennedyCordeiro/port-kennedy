@@ -14,6 +14,9 @@ export const NavWrapper = styled.nav`
   justify-content: flex-end;
   align-items: center;
   background-color: transparent;
+  &.black-background {
+    background-color: #201f2fff;
+  }
   @media screen and (max-width: 900px) {
   }
 `;
@@ -23,7 +26,7 @@ export const NavContainer = styled.div`
   justify-content: end;
   align-items: center;
   margin-right: 80px;
-  margin-top: 20px;
+  margin-top: 10px;
   @media screen and (max-width: 900px) {
     margin-right: 0px;
     margin-top: 0px;
@@ -78,7 +81,6 @@ export const NavIconsSmart = styled.div`
     align-items: center;
     position: absolute;
     transition: 0.5s;
-
     font-size: 22px;
   }
 
