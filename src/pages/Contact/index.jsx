@@ -1,6 +1,7 @@
 import * as C from "./Contact.styled";
 import { useState } from "react";
 import LocationIcon from "../../assets/Images/location.svg";
+// import Squircley from "../../assets/Squircley.svg";
 
 const Contact = () => {
   const [translate, setTranslate] = useState(false);
@@ -22,9 +23,11 @@ const Contact = () => {
   };
   return (
     <C.Container>
+      {/* <img src={{ Squircley }}></img> */}
       <C.MidSection>
         {" "}
         <C.TitleDiv>Contact</C.TitleDiv>
+        {/* {getText()} */}
       </C.MidSection>
     </C.Container>
   );

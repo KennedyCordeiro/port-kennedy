@@ -53,7 +53,7 @@ const NavbarFixed = () => {
   }, []);
 
   return (
-    <NavWrapper className={isScrolled ? "black-background" : ""}>
+    <NavWrapper className={isScrolled && !menuSmart ? "black-background" : ""}>
       <NavContainer>
         <List>
           {sections.map((section) => (

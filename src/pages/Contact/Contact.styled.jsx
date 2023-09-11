@@ -7,10 +7,11 @@ export const Container = styled.div`
   height: 100vh;
   display: flex;
   font-family: "Euclid Circular A", "Poppins";
-  background-image: url(${BackgroundContact});
+  /* background-image: url(${BackgroundContact});
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+  background-color: ;
   justify-content: center;
   align-items: center;
 `;

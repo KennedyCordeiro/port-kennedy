@@ -16,8 +16,18 @@ export const NavWrapper = styled.nav`
   background-color: transparent;
   &.black-background {
     background-color: #201f2fff;
+    animation: showMenu 0.5s ease-in-out;
   }
   @media screen and (max-width: 900px) {
+  }
+
+  @keyframes showMenu {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 `;
 
@@ -90,7 +100,6 @@ export const NavIconsSmart = styled.div`
     }
     to {
       opacity: 1;
-      visibility: visible;
     }
   }
 
