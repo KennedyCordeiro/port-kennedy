@@ -6,7 +6,18 @@
   justify-content: center;
   flex-direction: row;
 }
-.social-icon a {
+
+.empty-icon {
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.social-icon a,
+.empty-icon a {
   width: 42px;
   height: 42px;
   margin: 5px;
@@ -20,7 +31,9 @@
   border: 1px solid rgba(255, 255, 255, 0.5);
   cursor: pointer;
 }
-.social-icon a::before {
+
+.social-icon a::before,
+.empty-icon a::before {
   content: "";
   width: 42px;
   height: 42px;
@@ -30,15 +43,19 @@
   transform: scale(0);
   transition: 0.3s ease-in-out;
 }
-.social-icon a:hover::before {
+.social-icon a:hover::before,
+.empty-icon a:hover::before {
   transform: scale(1);
 }
-.social-icon a img {
+
+.social-icon a img,
+.empty-icon a img {
   width: 40%;
   z-index: 1;
   transition: 0.3s ease-in-out;
 }
-.social-icon a:hover img {
+.social-icon a:hover img,
+.empty-icon a:hover img {
   filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%)
     hue-rotate(346deg) brightness(95%) contrast(86%);
 }

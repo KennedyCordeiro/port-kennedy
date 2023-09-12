@@ -18,12 +18,12 @@ export const DivSkills = styled.div`
 `;
 
 export const Title = styled.p`
-  font-size: 78px;
+  font-size: 70px;
   margin-bottom: 10px;
   display: flex;
   margin-top: 10px;
 
   @media screen and (max-width: 900px) {
-    font-size: 60px;
+    font-size: 50px;
   }
 `;

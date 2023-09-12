@@ -6,18 +6,18 @@ export const Container = styled.div`
   flex-direction: column;
   height: 100vh;
   display: flex;
-  font-family: "Euclid Circular A", "Poppins";
+  font-family: "Joker One", sans-serif;
   /* background-image: url(${BackgroundContact});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; */
-  background-color: ;
-  justify-content: center;
+  background-color: #252333ff;
+
   align-items: center;
 `;
 
 export const TitleDiv = styled.div`
-  font-size: 40px;
+  font-size: 70px;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -27,10 +27,8 @@ export const TitleDiv = styled.div`
 
 export const MidSection = styled.div`
   display: flex;
-  width: 50%;
-  flex-direction: column;
-  height: 80%;
-  background-color: #171515;
+  width: 80%;
+  flex-direction: row;
   border-radius: 10px;
 `;
 
@@ -41,12 +39,26 @@ export const AddressDiv = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  grid-template-columns: 200px 200px;
 `;
 
 export const Paragraph = styled.div`
   display: flex;
-  width: 50%;
-  padding: 0 20px 0;
+  font-size: 20px;
+  width: 100%;
+  padding: 0 20px 0 0;
   align-items: center;
   justify-content: center;
+  font-style: normal;
+  margin-bottom: 20px;
+`;
+
+export const Column = styled.div`
+  width: 50%;
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
 `;

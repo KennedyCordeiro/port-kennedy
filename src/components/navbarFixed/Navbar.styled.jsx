@@ -16,14 +16,15 @@ export const NavWrapper = styled.nav`
   background-color: transparent;
   &.black-background {
     background-color: #201f2fff;
-    animation: showMenu 0.5s ease-in-out;
+    animation: showMenu 0.2s ease-in-out;
   }
   @media screen and (max-width: 900px) {
+    background-color: transparent !important;
   }
 
   @keyframes showMenu {
     from {
-      opacity: 0;
+      opacity: 0.7;
     }
     to {
       opacity: 1;
