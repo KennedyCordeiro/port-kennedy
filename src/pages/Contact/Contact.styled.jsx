@@ -1,9 +1,9 @@
 import { styled } from "styled-components";
 import BackgroundContact from "../../assets/Images/contact.svg";
+import Back from "../../assets/Images/backContact.jpg";
 
 export const Container = styled.div`
   width: 100%;
-  flex-direction: column;
   height: 100vh;
   display: flex;
   font-family: "Joker One", sans-serif;
@@ -17,11 +17,11 @@ export const Container = styled.div`
 `;
 
 export const TitleDiv = styled.div`
-  font-size: 70px;
+  font-size: 60px;
   width: 100%;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  margin: 20px;
+  margin: 50px 0 0 0;
   display: flex;
 `;
 
@@ -30,6 +30,12 @@ export const MidSection = styled.div`
   width: 80%;
   flex-direction: row;
   border-radius: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 
 export const AddressDiv = styled.div`
@@ -44,21 +50,33 @@ export const AddressDiv = styled.div`
 
 export const Paragraph = styled.div`
   display: flex;
-  font-size: 20px;
+  font-size: 17px;
   width: 100%;
-  padding: 0 20px 0 0;
-  align-items: center;
-  justify-content: center;
   font-style: normal;
-  margin-bottom: 20px;
+  padding-left: 3px;
+  font-family: "Euclid Circular A", "Poppins";
 `;
 
 export const Column = styled.div`
-  width: 50%;
-  flex-direction: row;
+  flex: 1;
+  flex-direction: column;
   display: flex;
   position: relative;
-  align-items: center;
-  justify-content: center;
+  align-items: baseline;
   font-size: 20px;
+  justify-content: flex-start;
+  height: 100%;
+  padding-left: 100px;
+`;
+
+export const Column1 = styled.div`
+  flex-grow: 0;
+  width: 450px;
+  display: flex;
+  position: relative;
+  height: 100%;
+  align-items: baseline;
+  background-position: center;
+  background-image: url(${Back});
+  background-size: cover;
 `;

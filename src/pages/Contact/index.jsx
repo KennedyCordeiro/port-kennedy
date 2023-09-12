@@ -1,8 +1,9 @@
 import * as C from "./Contact.styled";
 import { useState } from "react";
-import LocationIcon from "../../assets/Images/location.svg";
-// import Squircley from "../../assets/Squircley.svg";
 import NavIcons from "../../components/navIcons";
+import TextField from "@mui/material/TextField";
+import { styled } from "@mui/material/styles";
+
 const Contact = () => {
   const [translate, setTranslate] = useState(false);
 
@@ -17,10 +18,32 @@ const Contact = () => {
     setTranslate(!translate);
   };
 
+  const MyStyledTextField = styled(TextField)({
+    backgroundColor: "transparent",
+    marginTop: "10px",
+    width: "50%",
+    color: "#ffffff",
+    "& .MuiInputLabel-root": {
+      color: "#ffffff",
+    },
+    "& .MuiInput-root": {
+      color: "#ffffff",
+    },
+    "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+      borderColor: "#ffffff",
+    },
+  });
+
   return (
     <C.Container>
-      <C.TitleDiv>{getTitle()}</C.TitleDiv>
-      <C.Paragraph>{getText()}</C.Paragraph>
+      <C.Column1></C.Column1>
+      <C.Column>
+        <C.TitleDiv>{getTitle()}</C.TitleDiv>
+        <C.Paragraph>{getText()}</C.Paragraph>
+        <MyStyledTextField label="Seu Nome" variant="outlined" />
+      </C.Column>
+
+      {/* 
       <C.MidSection>
         <C.Column>
           {" "}
@@ -32,6 +55,16 @@ const Contact = () => {
           https://www.linkedin.com/in/kennedy-cordeiro-b05186198/
         </C.Column>
       </C.MidSection>
+      <C.MidSection>
+        <C.Column>
+          <NavIcons selectedIcon={"email"} style={{ flex: "1" }} />
+          kennedy.engsoftware@gmail.com {"    "}
+        </C.Column>
+        <C.Column>
+          <NavIcons selectedIcon={"linkedin"} />
+          https://www.linkedin.com/in/kennedy-cordeiro-b05186198/
+        </C.Column>
+      </C.MidSection> */}
     </C.Container>
   );
 };
