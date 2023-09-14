@@ -19,10 +19,11 @@ export const Container = styled.div`
 export const TitleDiv = styled.div`
   font-size: 60px;
   width: 100%;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  margin: 50px 0 0 0;
+
   display: flex;
+  background: #50367e;
 `;
 
 export const MidSection = styled.div`
@@ -37,7 +38,9 @@ export const MidSection = styled.div`
     flex-direction: column;
   }
 `;
-
+export const TitleLabel = styled.span`
+  margin-top: "10px";
+`;
 export const AddressDiv = styled.div`
   display: flex;
   width: 50%;
@@ -51,8 +54,10 @@ export const AddressDiv = styled.div`
 export const Paragraph = styled.div`
   display: flex;
   font-size: 17px;
-  width: 100%;
   font-style: normal;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
   padding-left: 3px;
   font-family: "Euclid Circular A", "Poppins";
 `;
@@ -62,11 +67,11 @@ export const Column = styled.div`
   flex-direction: column;
   display: flex;
   position: relative;
-  align-items: baseline;
+  align-items: center;
   font-size: 20px;
   justify-content: flex-start;
   height: 100%;
-  padding-left: 100px;
+  //padding-left: 100px;
 `;
 
 export const Column1 = styled.div`
@@ -79,4 +84,7 @@ export const Column1 = styled.div`
   background-position: center;
   background-image: url(${Back});
   background-size: cover;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 `;

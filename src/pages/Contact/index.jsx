@@ -2,10 +2,14 @@ import * as C from "./Contact.styled";
 import { useState } from "react";
 import NavIcons from "../../components/navIcons";
 import TextField from "@mui/material/TextField";
-import { styled } from "@mui/material/styles";
+import InputStyled from "../../components/InputStyled";
+import TestInput from "../../components/testInput";
 
 const Contact = () => {
   const [translate, setTranslate] = useState(false);
+  const [email, setEmail] = useState("");
+  const [textMail, setTextMail] = useState("");
+  const [name, setName] = useState("");
 
   const getText = () =>
     !translate
@@ -18,29 +22,30 @@ const Contact = () => {
     setTranslate(!translate);
   };
 
-  const MyStyledTextField = styled(TextField)({
-    backgroundColor: "transparent",
-    marginTop: "10px",
-    width: "50%",
-    color: "#ffffff",
-    "& .MuiInputLabel-root": {
-      color: "#ffffff",
-    },
-    "& .MuiInput-root": {
-      color: "#ffffff",
-    },
-    "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-      borderColor: "#ffffff",
-    },
-  });
-
   return (
     <C.Container>
       <C.Column1></C.Column1>
       <C.Column>
         <C.TitleDiv>{getTitle()}</C.TitleDiv>
         <C.Paragraph>{getText()}</C.Paragraph>
-        <MyStyledTextField label="Seu Nome" variant="outlined" />
+        <span>Digite seu Email</span>
+        <TestInput
+          label="Email"
+          placeholder="Insira seu email"
+          value={email}
+          type={"email"}
+          onChange={(e) => setEmail(e.target.value)}
+          width={"70%"}
+        />
+        <span>Digite seu nome</span>
+        <TestInput
+          placeholder="Insira seu nome"
+          label="Nome"
+          onChange={(e) => setName(e.target.value)}
+          value={name}
+          type={"text"}
+        />
+        <br />
       </C.Column>
 
       {/* 
