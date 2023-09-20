@@ -4,12 +4,14 @@ import NavIcons from "../../components/navIcons";
 import TextField from "@mui/material/TextField";
 import InputStyled from "../../components/InputStyled";
 import TestInput from "../../components/testInput";
+import ButtonMessage from "../../components/buttonMessage";
 
 const Contact = () => {
   const [translate, setTranslate] = useState(false);
   const [email, setEmail] = useState("");
   const [textMail, setTextMail] = useState("");
   const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
 
   const getText = () =>
     !translate
@@ -20,6 +22,10 @@ const Contact = () => {
 
   const handleTranslate = () => {
     setTranslate(!translate);
+  };
+
+  const sendMessage = () => {
+    console.log("enviado");
   };
 
   return (
@@ -35,7 +41,7 @@ const Contact = () => {
           value={email}
           type={"email"}
           onChange={(e) => setEmail(e.target.value)}
-          width={"70%"}
+          width={"width-70"}
         />
         <span>Digite seu nome</span>
         <TestInput
@@ -45,7 +51,18 @@ const Contact = () => {
           value={name}
           type={"text"}
         />
-        <br />
+
+        <span>Digite agora sua mensagem</span>
+        <TestInput
+          placeholder="Insira sua mensagem"
+          label="Mensagem"
+          onChange={(e) => setMessage(e.target.value)}
+          value={message}
+          type={"text"}
+          overrated={true}
+        />
+
+        <ButtonMessage Onclick={sendMessage} Text={"Enviar mensagem"} />
       </C.Column>
 
       {/* 

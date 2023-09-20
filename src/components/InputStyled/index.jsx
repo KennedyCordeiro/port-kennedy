@@ -1,57 +1,54 @@
-import { useState } from "react";
-
-import { alpha, styled } from "@mui/material/styles";
-import InputBase from "@mui/material/InputBase";
-import Box from "@mui/material/Box";
-import InputLabel from "@mui/material/InputLabel";
 import TextField from "@mui/material/TextField";
-import FormControl from "@mui/material/FormControl";
+import { useTheme } from "@mui/material/styles";
+import { styled } from "@mui/material";
+import "./styles.css";
+
+const CustomTextField = styled(TextField)(({ overrated }) => ({
+  width: "100%",
+  "& .MuiInputLabel-root": {
+    color: "white",
+  },
+  "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+    borderColor: "white",
+    backgroundColor: "transparent",
+    width: "100%",
+    height: overrated ? "100px" : undefined,
+  },
+  "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
+    borderColor: "white",
+  },
+  "& .MuiOutlinedInput-input": {
+    color: "white",
+  },
+  "& .MuiInputLabel-root.Mui-focused": {
+    color: "white",
+    //borderColor: "#50367e",
+  },
+}));
 
 const InputStyled = ({
-  label,
   type,
+  label,
   placeholder,
   value,
   onChange,
-  error,
-  errorMessage,
-  styledInput,
+  overrated,
 }) => {
-  const ValidationTextField = styled(TextField)({
-    "& input:valid + fieldset": {
-      borderColor: "#E0E3E7",
-      borderWidth: 1,
-    },
-    "& input:invalid + fieldset": {
-      borderColor: "red",
-      borderWidth: 1,
-    },
-    "& input:valid:focus + fieldset": {
-      borderLeftWidth: 4,
-      padding: "4px !important", // override inline-style
-    },
-  });
-  const getInput = () => {
-    if (styledInput) {
-      return (
-        <>
-          <ValidationTextField
-            label={label}
-            required
-            type={type}
-            placeholder={placeholder}
-            variant="outlined"
-            id="validation-outlined-input"
-            value={value}
-            onChange={onChange}
-          />
-        </>
-      );
-    } else {
-      return <TextField></TextField>;
-    }
-  };
-
-  return getInput();
+  return (
+    <form className={overrated ? "my-inputOverrated" : "my-input"}>
+      <CustomTextField
+        label={label}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+        variant="outlined"
+        autoComplete="off"
+        type={type}
+        overrated={overrated}
+        sx={{ height: "70px" }}
+      />
+    </form>
+  );
 };
+
 export default InputStyled;
