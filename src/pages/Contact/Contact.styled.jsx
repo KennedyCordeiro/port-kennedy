@@ -1,10 +1,11 @@
 import { styled } from "styled-components";
 import BackgroundContact from "../../assets/Images/contact.svg";
 import Back from "../../assets/Images/backContact.jpg";
+import BackP from "../../assets/Images/backPurple.jpg";
 
 export const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 85vh;
   display: flex;
   font-family: "Joker One", sans-serif;
   /* background-image: url(${BackgroundContact});
@@ -14,6 +15,10 @@ export const Container = styled.div`
   background-color: #252333ff;
 
   align-items: center;
+
+  @media screen and (max-width: 900px) {
+    height: 93vh;
+  }
 `;
 
 export const TitleDiv = styled.div`
@@ -23,7 +28,7 @@ export const TitleDiv = styled.div`
   align-items: center;
 
   display: flex;
-  background: #50367e;
+  background: #35006d;
 `;
 
 export const MidSection = styled.div`
@@ -71,6 +76,7 @@ export const Column = styled.div`
   font-size: 20px;
   justify-content: flex-start;
   height: 100%;
+
   //padding-left: 100px;
 `;
 
@@ -82,9 +88,28 @@ export const Column1 = styled.div`
   height: 100%;
   align-items: baseline;
   background-position: center;
-  background-image: url(${Back});
+  background-image: url(${BackP});
   background-size: cover;
   @media screen and (max-width: 900px) {
     display: none;
+  }
+`;
+
+export const DivIcons = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  position: absolute;
+  top: 37%;
+  left: 90%;
+  align-items: center;
+  @media screen and (max-width: 900px) {
+    top: auto;
+    left: auto;
+    flex-direction: row;
+    position: relative;
+    width: auto;
+    padding-bottom: 0;
+    margin-top: 30px;
   }
 `;

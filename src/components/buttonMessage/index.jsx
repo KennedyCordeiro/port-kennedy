@@ -5,7 +5,7 @@ const StyledButton = styled.button`
   border: none;
   border-radius: 5px;
   font-weight: bold;
-  letter-spacing: 5px;
+  letter-spacing: 6px;
   text-transform: uppercase;
   color: #ffffff;
   transition: all 1000ms;
@@ -14,11 +14,15 @@ const StyledButton = styled.button`
   overflow: hidden;
   outline: 2px solid #50367e;
   background-color: transparent;
+  width: 350px;
+  cursor: pointer;
 
   @media screen and (max-width: 900px) {
     letter-spacing: 2px;
     width: 250px;
+    font-size: 12px;
   }
+
   &:hover {
     color: #ffffff;
     transform: scale(1.03);
@@ -45,7 +49,11 @@ const StyledButton = styled.button`
 `;
 
 const DivButton = styled.div`
-  margin: 60px;
+  margin-top: 80px;
+
+  @media screen (max-width: 900px) {
+    margin-top: 40px;
+  }
 `;
 
 const ButtonMessage = ({ Text, Onclick }) => {

@@ -36,8 +36,9 @@ export const NavContainer = styled.div`
   display: flex;
   justify-content: end;
   align-items: center;
-  margin-right: 80px;
+  margin-right: 140px;
   margin-top: 10px;
+
   @media screen and (max-width: 900px) {
     margin-right: 0px;
     margin-top: 0px;

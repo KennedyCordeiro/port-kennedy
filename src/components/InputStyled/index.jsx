@@ -35,14 +35,13 @@ const InputStyled = ({
   overrated,
 }) => {
   return (
-    <form className={overrated ? "my-inputOverrated" : "my-input"}>
+    <form className={"my-input"}>
       <CustomTextField
         label={label}
         placeholder={placeholder}
         value={value}
         onChange={onChange}
         variant="outlined"
-        autoComplete="off"
         type={type}
         overrated={overrated}
         sx={{ height: "70px" }}

@@ -51,7 +51,7 @@ export const MidSection = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-right: 80px;
+  margin-right: 140px;
 
   @media screen and (max-width: 900px) {
     margin-right: 0px;
