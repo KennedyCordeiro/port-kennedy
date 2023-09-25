@@ -73,14 +73,13 @@ export const NavIconsSmart = styled.div`
     opacity: ${(props) => (props.menuSmart ? "1" : "0")};
     transform: translateY(${(props) => (props.menuSmart ? "0" : "-100%")});
     transition: opacity 0.5s ease-in-out;
-
     top: 0px;
     width: 100%;
     height: 100vh;
     background-color: #27272758;
     gap: 20px;
     flex-direction: column;
-    position: fixed;
+
     backdrop-filter: blur(20px);
     animation: ${(props) =>
       props.menuSmart
@@ -99,6 +98,9 @@ export const NavIconsSmart = styled.div`
   @keyframes showMenu {
     from {
       opacity: 0;
+    }
+    to {
+      opacity: 0.5;
     }
     to {
       opacity: 1;

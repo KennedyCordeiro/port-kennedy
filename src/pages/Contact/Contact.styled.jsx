@@ -119,10 +119,21 @@ export const LoaderDiv = styled.div`
   background-color: #27272758;
   gap: 20px;
   flex-direction: column;
-  position: fixed;
   backdrop-filter: blur(20px);
-  animation: ${(props) =>
-    props.menuSmart
-      ? " showMenu 0.5s ease-in-out"
-      : "hideMenu 0.5s ease-in-out"};
+  animation: showMenu 0.5s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  @keyframes showMenu {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.5;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 `;
