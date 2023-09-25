@@ -1,6 +1,5 @@
 import { styled } from "styled-components";
 import BackgroundContact from "../../assets/Images/contact.svg";
-import Back from "../../assets/Images/backContact.jpg";
 import BackP from "../../assets/Images/backPurple.jpg";
 
 export const Container = styled.div`
@@ -112,4 +111,18 @@ export const DivIcons = styled.div`
     padding-bottom: 0;
     margin-top: 30px;
   }
+`;
+
+export const LoaderDiv = styled.div`
+  width: 100%;
+  height: 100vh;
+  background-color: #27272758;
+  gap: 20px;
+  flex-direction: column;
+  position: fixed;
+  backdrop-filter: blur(20px);
+  animation: ${(props) =>
+    props.menuSmart
+      ? " showMenu 0.5s ease-in-out"
+      : "hideMenu 0.5s ease-in-out"};
 `;
