@@ -57,11 +57,12 @@ const Header = () => {
   return (
     <div className="banner-content">
       <a className="profile">Kennedy Cordeiro</a>
-      <h3>
-        <span className="txt-rotate">
+
+      <div className="txt-rotate">
+        <h3>
           <span className="wrap">{text}</span>
-        </span>
-      </h3>
+        </h3>
+      </div>
     </div>
   );
 };

@@ -2,3 +2,9 @@
   font-family: Joker One;
   src: url("./assets/Fonts/JockeyOne-Regular.ttf");
 }
+
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/Fonts/Raleway/Raleway-VariableFont_wght.ttf")
+    format("truetype");
+}

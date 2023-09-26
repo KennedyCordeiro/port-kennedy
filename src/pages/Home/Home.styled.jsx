@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh; /* Altere a altura para 100vh para cobrir toda a altura da página */
   display: flex;
   justify-content: space-between;
   background-color: #d7d7d7;
@@ -11,6 +11,7 @@ export const Container = styled.div`
   background-position: right;
   background-repeat: no-repeat;
   background-origin: initial;
+  background-size: 60% auto;
 
   flex-direction: column;
   align-items: end;
@@ -30,7 +31,6 @@ export const Container = styled.div`
     }
   }
 `;
-
 export const NavbarContainer = styled.div`
   align-items: center;
   height: 10%;
@@ -53,6 +53,7 @@ export const MidSection = styled.div`
   align-items: center;
   flex-direction: column;
   margin-right: 140px;
+  padding-bottom: 5em;
 
   @media screen and (max-width: 900px) {
     margin-right: 0px;
@@ -61,4 +62,8 @@ export const MidSection = styled.div`
 
 export const Itens = styled.div`
   display: flex;
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  flex-direction: column;
 `;

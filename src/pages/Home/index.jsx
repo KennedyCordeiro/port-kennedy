@@ -16,14 +16,11 @@ const Home = () => {
       <C.Container>
         <C.MidSection>
           <ImagePerfil></ImagePerfil>
+          <NavIcons></NavIcons>
           <C.Itens>
             <Header></Header>
+            <ButtonCur onClickButton={DownloadCurriculum} text="Acessar CV" />
           </C.Itens>
-          <NavIcons></NavIcons>
-          <ButtonCur
-            onClickButton={DownloadCurriculum}
-            text="Acessar Curriculo"
-          ></ButtonCur>
         </C.MidSection>
       </C.Container>
     </>

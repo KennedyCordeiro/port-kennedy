@@ -1,18 +1,14 @@
-.banner {
-  background-size: cover;
-  background-position: center;
-  color: #f7f7f7;
-}
-
 .banner-content {
   top: 0;
+  display: flex;
   left: 0;
+  font-family: Raleway, sans-serif !important;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  color: #f7f7f7;
+  justify-content: flex-start;
+  color: #3b3b3b;
   display: flex;
-  text-align: left;
+  text-align: end;
   align-items: center;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
@@ -33,7 +29,7 @@
 }
 
 .profile {
-  font-size: 24px;
+  font-size: 80px;
   margin-top: 15px;
   font-weight: bold;
 }
@@ -41,4 +37,11 @@
   font-size: 18px;
   margin-top: 15px;
   font-weight: bold;
+}
+
+.txt-rotate {
+  display: flex;
+  margin-left: 10px;
+  width: 100%;
+  font-size: 1.3em;
 }

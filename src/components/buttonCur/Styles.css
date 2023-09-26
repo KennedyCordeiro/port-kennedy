@@ -3,12 +3,13 @@
   background: transparent;
   border: none;
   padding: 1em 1.5em;
-  color: #eff1f0;
+  color: #3b3b3b;
   text-transform: uppercase;
   position: relative;
   transition: 0.5s ease;
   cursor: pointer;
-  font-family: "Euclid Circular A";
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
 }
 
 .btn::before {
@@ -18,12 +19,12 @@
   bottom: 0;
   height: 2px;
   width: 0;
-  background-color: #ffffff;
+  background-color: #3b3b3b;
   transition: 0.5s ease;
 }
 
 .btn:hover {
-  color: #eff1f0;
+  color: #50367e;
   transition-delay: 0.5s;
 }
 
