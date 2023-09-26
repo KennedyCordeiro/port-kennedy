@@ -1,15 +1,17 @@
 import * as C from "./ImagePerfil.styled";
-import DevImage from "../../assets/Images/DevPerfil.jpg";
-import "./styles.css";
+import DevImage from "../../assets/Images/DevPerfil.svg";
+import DevImagee from "../../assets/Images/perfilImg.svg";
+
+//import "./styles.css";
 
 const ImagePerfil = () => {
   return (
     <C.DivImage>
-      <img
+      <C.ImgPerfil
         className="image-perfil"
-        src={DevImage}
+        src={DevImagee}
         alt="Imagem de perfil do usuário"
-      ></img>
+      ></C.ImgPerfil>
     </C.DivImage>
   );
 };

@@ -15,7 +15,7 @@ export const NavWrapper = styled.nav`
   align-items: center;
   background-color: transparent;
   &.black-background {
-    background-color: #201f2fff;
+    background-color: #121212c1;
     animation: showMenu 0.2s ease-in-out;
     @media screen and (max-width: 900px) {
       background-color: transparent;
@@ -40,7 +40,7 @@ export const NavContainer = styled.div`
   display: flex;
   justify-content: end;
   align-items: center;
-  margin-right: 140px;
+  margin-right: 240px;
   margin-top: 10px;
 
   @media screen and (max-width: 900px) {
@@ -94,7 +94,7 @@ export const NavIconsSmart = styled.div`
     align-items: center;
     position: absolute;
     transition: 0.5s;
-    font-size: 22px;
+    font-size: 28px;
   }
 
   @keyframes showMenu {
@@ -125,6 +125,7 @@ export const StyledLink = styled(ScrollLink)`
   text-decoration: none;
   color: #fff;
   cursor: pointer;
+  font-size: 18px;
 
   &::before,
   &::after {
@@ -133,7 +134,7 @@ export const StyledLink = styled(ScrollLink)`
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #483285;
+    background-color: #d7d7d7;
     transform: scaleX(0);
     transition: transform 0.25s;
   }

@@ -15,11 +15,15 @@ const Home = () => {
     <>
       <C.Container>
         <C.MidSection>
-          <ImagePerfil></ImagePerfil>
-          <NavIcons></NavIcons>
+          <C.ImagePerfilDiv>
+            <ImagePerfil></ImagePerfil>
+          </C.ImagePerfilDiv>
           <C.Itens>
             <Header></Header>
             <ButtonCur onClickButton={DownloadCurriculum} text="Acessar CV" />
+            <C.NavIconsDiv>
+              <NavIcons></NavIcons>
+            </C.NavIconsDiv>
           </C.Itens>
         </C.MidSection>
       </C.Container>

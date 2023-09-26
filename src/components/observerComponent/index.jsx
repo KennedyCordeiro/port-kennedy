@@ -16,11 +16,9 @@ const ObserverComponent = () => {
     hiddenElements.forEach((element) => observer.observe(element));
 
     return () => {
-      // Limpar o observador quando o componente for desmontado
       hiddenElements.forEach((element) => observer.unobserve(element));
     };
-  }, []); // O array vazio [] garante que isso seja executado apenas uma vez no montagem do componente.
-
+  }, []);
   return <div className="hidden">{/* Conteúdo do componente */}</div>;
 };
 

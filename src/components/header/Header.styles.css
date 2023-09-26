@@ -12,10 +12,17 @@
   align-items: center;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
+
+  @media screen and (max-width: 900px) {
+    color: #909090;
+    margin-left: 80px;
+  }
 }
 
 .banner h2 {
   font-size: 40px;
+  @media screen and (max-width: 900px) {
+  }
 }
 
 .banner h3 {
@@ -32,6 +39,10 @@
   font-size: 80px;
   margin-top: 15px;
   font-weight: bold;
+
+  @media screen and (max-width: 900px) {
+    font-size: 50px;
+  }
 }
 .profile2 {
   font-size: 18px;
@@ -44,4 +55,5 @@
   margin-left: 10px;
   width: 100%;
   font-size: 1.3em;
+  color: #909090;
 }

@@ -2,8 +2,8 @@ import { styled } from "styled-components";
 
 export const DivSkills = styled.div`
   width: 100%;
-  height: 45vh;
-  background-color: #252333;
+  height: 100vh;
+  background-color: #d7d7d7;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -13,7 +13,23 @@ export const DivSkills = styled.div`
 
   @media screen and (max-width: 900px) {
     padding-bottom: 5px;
-    height: 30vh;
+  }
+`;
+export const DivTitle = styled.div`
+  width: 500px;
+  border: 1px solid;
+  margin: 20px 0 40px 0;
+  border-color: #3b3b3b;
+  border-radius: 20% 0 20% 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: #3b3b3b;
+  &:hover {
+    background-color: #3b3b3b;
+    color: #d7d7d7;
+    border-color: #d7d7d7;
+    transition: 0.5s ease-in-out;
   }
 `;
 
@@ -27,3 +43,5 @@ export const Title = styled.p`
     font-size: 50px;
   }
 `;
+
+export const DivIcons = styled.div``;

@@ -8,6 +8,7 @@ const Header = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [num, setNum] = useState(1);
+  const TextTitle = "<Kennedy Cordeiro />";
 
   const toRotate = [
     "Front-end Developer",
@@ -56,7 +57,7 @@ const Header = () => {
 
   return (
     <div className="banner-content">
-      <a className="profile">Kennedy Cordeiro</a>
+      <a className="profile">{TextTitle}</a>
 
       <div className="txt-rotate">
         <h3>

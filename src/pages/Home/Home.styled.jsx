@@ -1,4 +1,5 @@
-import Back from "../../assets/Images/Rectangle.svg";
+//import Back from "../../assets/Images/Rectangle.svg";
+import Back from "../../assets/Images/background/Rblack.svg";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -12,13 +13,15 @@ export const Container = styled.div`
   background-repeat: no-repeat;
   background-origin: initial;
   background-size: 60% auto;
-
+  object-fit: cover;
   flex-direction: column;
   align-items: end;
   animation: fadeIn 0.7s ease-in-out;
   padding-bottom: 10px;
+
   @media screen and (max-width: 900px) {
     align-items: center;
+    background-size: 108% auto;
     padding-bottom: 20px;
   }
 
@@ -66,4 +69,16 @@ export const Itens = styled.div`
   top: 40%;
   left: 5%;
   flex-direction: column;
+`;
+
+export const NavIconsDiv = styled.div`
+  display: flex;
+  margin-top: 10px;
+`;
+
+export const ImagePerfilDiv = styled.div`
+  margin-top: 8em;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 `;
