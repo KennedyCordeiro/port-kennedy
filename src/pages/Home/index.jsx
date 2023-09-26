@@ -1,4 +1,3 @@
-import NavbarFixed from "../../components/navbarFixed";
 import Header from "../../components/header/";
 import * as C from "./Home.styled";
 import NavIcons from "../../components/navIcons";

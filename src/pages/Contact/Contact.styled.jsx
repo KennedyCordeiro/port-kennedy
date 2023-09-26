@@ -16,7 +16,7 @@ export const Container = styled.div`
   align-items: center;
 
   @media screen and (max-width: 900px) {
-    height: 93vh;
+    height: 96vh;
   }
 `;
 
@@ -25,7 +25,6 @@ export const TitleDiv = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
-
   display: flex;
   background: #35006d;
 `;
@@ -100,6 +99,7 @@ export const DivIcons = styled.div`
   padding-bottom: 10px;
   position: absolute;
   top: 37%;
+  margin-right: 20px;
   left: 90%;
   align-items: center;
   @media screen and (max-width: 900px) {
@@ -110,20 +110,29 @@ export const DivIcons = styled.div`
     width: auto;
     padding-bottom: 0;
     margin-top: 30px;
+    margin-right: 0;
   }
 `;
 
 export const LoaderDiv = styled.div`
-  width: 100%;
-  height: 100vh;
-  background-color: #27272758;
-  gap: 20px;
-  flex-direction: column;
-  backdrop-filter: blur(20px);
-  animation: showMenu 0.5s ease-in-out;
+  display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed; /* Alterado para posição fixa */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  opacity: 1;
+  background-color: rgba(
+    39,
+    39,
+    39,
+    0.6
+  ); /* Alterado o valor de alpha para um efeito de fundo mais suave */
+  backdrop-filter: blur(20px);
+  animation: showMenu 0.5s ease-in-out;
 
   @keyframes showMenu {
     from {

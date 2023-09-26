@@ -1,22 +1,23 @@
-import Back from "../../assets/Images/background.jpg";
+import Back from "../../assets/Images/Rectangle.svg";
 import styled from "styled-components";
 
 export const Container = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: #f2f2f2;
-  height: 100vh;
+  background-color: #d7d7d7;
   background-image: url(${Back});
-  background-position: center;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-origin: initial;
 
-  width: 100%;
   flex-direction: column;
   align-items: end;
   animation: fadeIn 0.7s ease-in-out;
   padding-bottom: 10px;
   @media screen and (max-width: 900px) {
     align-items: center;
-    height: auto;
     padding-bottom: 20px;
   }
 

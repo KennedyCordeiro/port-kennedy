@@ -1,4 +1,3 @@
-import React from "react";
 import styled, { keyframes } from "styled-components";
 
 const loaderAnimation = keyframes`
@@ -42,7 +41,7 @@ const LoaderBar = styled.div`
   bottom: 0;
   width: 10px;
   height: 50%;
-  background: rgb(0, 0, 0);
+  background: rgb(221, 221, 221);
   transform-origin: center bottom;
   box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 `;
@@ -53,7 +52,7 @@ const LoaderBall = styled.div`
   left: 0;
   width: 10px;
   height: 10px;
-  background: rgb(44, 143, 255);
+  background: #650ac7;
   border-radius: 50%;
   animation: ${loaderAnimation} 4s infinite;
 `;

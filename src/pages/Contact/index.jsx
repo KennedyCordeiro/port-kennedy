@@ -1,26 +1,43 @@
 import * as C from "./Contact.styled";
 import { useState } from "react";
 import NavIcons from "../../components/navIcons";
-import TextField from "@mui/material/TextField";
 import InputStyled from "../../components/InputStyled";
 import ButtonMessage from "../../components/buttonMessage";
 import emailJs from "@emailjs/browser";
 import Loader from "../../components/loader";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 
 const Contact = () => {
-  const [translate, setTranslate] = useState(false);
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [loader, setLoader] = useState(false);
+  const [openAlert, setOpenAlert] = useState(false);
+  const [successMessage, setSuccessMessage] = useState(false);
+
+  const getAlert = () => {
+    if (!successMessage) {
+      return (
+        <Alert onClose={handleCloseAlert} severity="error">
+          Preencha todos os campos!
+        </Alert>
+      );
+    }
+    return (
+      <Alert onClose={handleCloseAlert} severity="success">
+        Email enviado com sucesso
+      </Alert>
+    );
+  };
 
   const sendMessage = (e) => {
     e.preventDefault();
     setLoader(true);
 
     if (name === "" || message === "" || email === "") {
-      alert("Preencha todos os campos");
       setLoader(false);
+      setOpenAlert(true);
       return;
     }
 
@@ -44,20 +61,37 @@ const Contact = () => {
             response.status,
             response.text
           );
-          alert("Email enviado com sucesso");
           setName("");
           setEmail("");
           setMessage("");
+          setOpenAlert(true);
+          setSuccessMessage(true);
+          setTimeout(() => {
+            setSuccessMessage(false), setOpenAlert(false), setLoader(false);
+          }, 5000);
         },
         (err) => {
           console.log("Erro:", err);
+          setOpenAlert(true);
+          setLoader(false);
         }
       );
-    setLoader(false);
+  };
+
+  const handleCloseAlert = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpenAlert(false);
   };
 
   return (
     <C.Container>
+      {loader && (
+        <C.LoaderDiv>
+          <Loader></Loader>
+        </C.LoaderDiv>
+      )}
       <C.Column1 />
       <C.Column>
         <C.TitleDiv>{"Contatos"}</C.TitleDiv>
@@ -94,35 +128,20 @@ const Contact = () => {
           overrated={true}
         />
         <ButtonMessage Onclick={sendMessage} Text={"Enviar mensagem"} />
+        <Snackbar
+          open={openAlert}
+          autoHideDuration={6000}
+          onClose={handleCloseAlert}
+        >
+          {getAlert()}
+        </Snackbar>
+
         <C.DivIcons>
           <NavIcons selectedIcon={"linkedin"} />
           <NavIcons selectedIcon={"instagram"} />
           <NavIcons selectedIcon={"github"} />
         </C.DivIcons>
       </C.Column>
-
-      {/* 
-      <C.MidSection>
-        <C.Column>
-          {" "}
-          <NavIcons selectedIcon={"github"} />
-          https://github.com/KennedyCordeiro/
-        </C.Column>
-        <C.Column>
-          <NavIcons selectedIcon={"linkedin"} />
-          https://www.linkedin.com/in/kennedy-cordeiro-b05186198/
-        </C.Column>
-      </C.MidSection>
-      <C.MidSection>
-        <C.Column>
-          <NavIcons selectedIcon={"email"} style={{ flex: "1" }} />
-          kennedy.engsoftware@gmail.com {"    "}
-        </C.Column>
-        <C.Column>
-          <NavIcons selectedIcon={"linkedin"} />
-          https://www.linkedin.com/in/kennedy-cordeiro-b05186198/
-        </C.Column>
-      </C.MidSection> */}
     </C.Container>
   );
 };

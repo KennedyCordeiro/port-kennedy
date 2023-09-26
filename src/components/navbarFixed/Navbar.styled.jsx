@@ -17,6 +17,10 @@ export const NavWrapper = styled.nav`
   &.black-background {
     background-color: #201f2fff;
     animation: showMenu 0.2s ease-in-out;
+    @media screen and (max-width: 900px) {
+      background-color: transparent;
+      animation: 0s;
+    }
   }
   @media screen and (max-width: 900px) {
     background-color: transparent !important;
@@ -58,7 +62,7 @@ export const List = styled.ul`
 export const DivIcon = styled.div`
   display: none;
   @media screen and (max-width: 900px) {
-    margin-right: 20px;
+    margin-right: 10px;
     position: absolute;
     display: flex;
     top: 20px;
@@ -79,13 +83,11 @@ export const NavIconsSmart = styled.div`
     background-color: #27272758;
     gap: 20px;
     flex-direction: column;
-
     backdrop-filter: blur(20px);
     animation: ${(props) =>
       props.menuSmart
         ? " showMenu 0.5s ease-in-out"
         : "hideMenu 0.5s ease-in-out"};
-    //visibility: ${(props) => (props.menuSmart ? "visible" : "hidden")};
     gap: 35px;
     display: flex;
     justify-content: center;
