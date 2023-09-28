@@ -39,7 +39,11 @@ const IconsCarousel = () => {
     },
     { image: icon7, alt: "Bootstrap", url: "https://getbootstrap.com/" },
     { image: icon8, alt: "Git", url: "https://git-scm.com/" },
-    { image: icon9, alt: "HTML5", url: "https://git-scm.com/" },
+    {
+      image: icon9,
+      alt: "HTML5",
+      url: "https://developer.mozilla.org/pt-BR/docs/Web/HTML",
+    },
     { image: icon10, alt: "Sass", url: "https://sass-lang.com/" },
     { image: icon12, alt: "Node", url: "https://nodejs.org/" },
     {

@@ -6,7 +6,7 @@ import About from "./pages/About";
 import NavbarFixed from "./components/navbarFixed";
 import Contact from "./pages/Contact";
 import ObserverComponent from "./components/observerComponent";
-
+import Container from "@mui/material/Container";
 function App() {
   return (
     <>

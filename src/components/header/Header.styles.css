@@ -10,12 +10,16 @@
   display: flex;
   text-align: end;
   align-items: center;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
 
   @media screen and (max-width: 900px) {
     color: #909090;
     margin-left: 80px;
+  }
+
+  @media screen and (max-width: 768px) {
+    color: #909090;
+    margin-left: 80px;
+    top: 20%;
   }
 }
 
@@ -36,12 +40,16 @@
 }
 
 .profile {
-  font-size: 80px;
+  font-size: 75px;
   margin-top: 15px;
   font-weight: bold;
 
   @media screen and (max-width: 900px) {
-    font-size: 50px;
+    font-size: 40px;
+  }
+
+  @media screen and (max-width: 1600px) {
+    font-size: 60px;
   }
 }
 .profile2 {

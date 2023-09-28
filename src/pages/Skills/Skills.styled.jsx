@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const DivSkills = styled.div`
   width: 100%;
-  height: 100vh;
+  height: auto;
   background-color: #d7d7d7;
   display: flex;
   justify-content: flex-start;
@@ -17,6 +17,7 @@ export const DivSkills = styled.div`
 `;
 export const DivTitle = styled.div`
   width: 500px;
+  height: 80px;
   border: 1px solid;
   margin: 20px 0 40px 0;
   border-color: #3b3b3b;
@@ -25,6 +26,7 @@ export const DivTitle = styled.div`
   display: flex;
   justify-content: center;
   color: #3b3b3b;
+  cursor: pointer;
   &:hover {
     background-color: #3b3b3b;
     color: #d7d7d7;

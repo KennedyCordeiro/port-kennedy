@@ -9,7 +9,7 @@ const ImagePerfil = () => {
     <C.DivImage>
       <C.ImgPerfil
         className="image-perfil"
-        src={DevImagee}
+        src={DevImage}
         alt="Imagem de perfil do usuário"
       ></C.ImgPerfil>
     </C.DivImage>

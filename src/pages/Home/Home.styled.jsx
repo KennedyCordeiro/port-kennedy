@@ -25,6 +25,12 @@ export const Container = styled.div`
     padding-bottom: 20px;
   }
 
+  @media screen and (max-width: 600px) {
+    align-items: center;
+    background-size: 150% auto;
+    padding-bottom: 20px;
+  }
+
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -46,7 +52,6 @@ export const NavbarContainer = styled.div`
 export const Column = styled.div`
   flex: 1;
   position: relative;
-
   justify-content: center;
 `;
 
@@ -77,8 +82,12 @@ export const NavIconsDiv = styled.div`
 `;
 
 export const ImagePerfilDiv = styled.div`
-  margin-top: 8em;
+  margin-top: 14em;
   @media screen and (max-width: 900px) {
     display: none;
+  }
+
+  @media screen and (max-width: 1600px) {
+    margin-top: 8em;
   }
 `;
