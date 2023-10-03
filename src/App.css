@@ -8,3 +8,9 @@
   src: url("./assets/Fonts/Raleway/Raleway-VariableFont_wght.ttf")
     format("truetype");
 }
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/Fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
+}

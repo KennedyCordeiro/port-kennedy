@@ -5,13 +5,38 @@ import { Snackbar } from "@mui/material";
 import Slide from "@mui/material/Slide";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
+import Line from "../../assets/Images/Line.svg";
+import Separator from "../../assets/Images/separator.svg";
 
 const About = () => {
   const [alertInfo, setAlertInfo] = useState(false);
   const [activeSection, setActiveSection] = useState("About");
-  const sections = [
-    { nameSection: "< Sobre mim />", title: "About" },
-    { nameSection: "< Carreira />", title: "Career" },
+  const icons = [
+    {
+      sectionIcon: C.Icon1,
+      title: "FitBank 450",
+      titleSection: C.DivTitleIcon1,
+    },
+    {
+      sectionIcon: C.Icon2,
+      title: "Bacharel em Engeharia de Software",
+      titleSection: C.DivTitleIcon2,
+    },
+    {
+      sectionIcon: C.Icon3,
+      title: "Desenvolvedor Full-Stack",
+      titleSection: C.DivTitleIcon3,
+    },
+    {
+      sectionIcon: C.Icon4,
+      title: "Desenvolvedor Front-End",
+      titleSection: C.DivTitleIcon4,
+    },
+    {
+      sectionIcon: C.Icon5,
+      title: "Freelancer",
+      titleSection: C.DivTitleIcon5,
+    },
   ];
   const TransitionSlide = (props) => {
     return <Slide {...props} direction="right" />;
@@ -25,77 +50,33 @@ const About = () => {
     if (reason === "clickaway") {
       return;
     }
-
     setAlertInfo(false);
+  };
+
+  const handleIcon = (title) => {
+    console.log(title);
   };
 
   return (
     <C.Container>
       <C.DivTitle>
         <C.Title onClick={handleInfo}>About</C.Title>
-        {/* <C.Subtitle onClick={handleInfo}>
-          -------------------| |-------------------
-        </C.Subtitle> */}
       </C.DivTitle>
-      <C.MidSection>
-        <C.SectionOptions>
-          <C.BorderedSection style={{ marginBottom: "30px" }} />
-          {sections.map((item, index) => (
-            <C.SectionOption
-              key={index}
-              onClick={() =>
-                console.log(item.title) && setActiveSection(item.title)
-              }
-            >
-              {" "}
-              {item.nameSection}
-            </C.SectionOption>
-          ))}
-        </C.SectionOptions>
-        <C.Column>
-          <C.BorderedSection />
-          {activeSection === "About" && (
-            <>
-              <C.TitleSection>Carreira</C.TitleSection>
-              {/* <C.Paragraph>
-                Olá! Sou um Engenheiro de Software apaixonado por criar soluções
-                inovadoras e escaláveis no mundo do desenvolvimento de software.
-                Com experiência tanto como Full Stack Developer quanto como
-                Desenvolvedor Front-End, meu objetivo principal é fornecer aos
-                usuários experiências excepcionais por meio de interfaces
-                intuitivas e atraentes. Acredito que a usabilidade é fundamental
-                para o sucesso de qualquer aplicativo ou site. Na área de
-                Front-End, domino tecnologias como React-JS, Redux-JS, Node-JS,
-                TypeScript, Sass, HTML, CSS e JavaScript. Sempre me esforço para
-                criar interfaces que não apenas funcionem bem, mas também sejam
-                visualmente atraentes e envolventes.
-              </C.Paragraph>
-              <C.Paragraph>
-                No Back-End, minha experiência se estende a ASP.NET, C#,
-                JavaScript e .NET Framework. Sigo ativamente os padrões de Clean
-                Code e SOLID para garantir que o código seja de alta qualidade e
-                fácil de manter. Acredito que um código bem escrito é a base de
-                qualquer projeto sólido. Estou constantemente aprimorando minhas
-                habilidades técnicas e acompanhando as últimas tendências do
-                setor. Sou altamente motivado, colaborativo e capaz de trabalhar
-                tanto de forma independente quanto em equipe.
-              </C.Paragraph>
-              <C.Paragraph>
-                Se você está procurando um profissional comprometido e
-                apaixonado pelo desenvolvimento de software, alguém que está
-                sempre buscando a excelência, adoraria conversar com você e
-                explorar possíveis oportunidades de trabalho juntos. Vamos
-                construir algo incrível juntos!
-              </C.Paragraph> */}
-            </>
-          )}
-        </C.Column>
-      </C.MidSection>
+      <C.SeparatorImg src={Separator} />
+      <C.LineSeparator src={Line} className="Line" />
+      {icons.map((icon, index) => (
+        <div key={index} style={{ display: "flex" }}>
+          <icon.sectionIcon onClick={() => handleIcon(icon.title)} />
+          <icon.titleSection>{icon.title}</icon.titleSection>
+        </div>
+      ))}
+
+      <C.MidSection></C.MidSection>
       <Snackbar
         open={alertInfo}
         onClose={handleClose}
         TransitionComponent={TransitionSlide}
-        message={"Qualquer dúvida é só me chamar nas minhas redes sociais..."}
+        message={"Qualquer dúvida pode  me chamar nas minhas redes sociais..."}
         action={
           <IconButton
             size="small"
@@ -107,6 +88,9 @@ const About = () => {
           </IconButton>
         }
       />
+      <C.SeparatorImgDown>
+        <img src={Separator} />
+      </C.SeparatorImgDown>
     </C.Container>
   );
 };

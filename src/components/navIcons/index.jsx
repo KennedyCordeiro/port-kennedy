@@ -1,8 +1,63 @@
+import React from "react";
+import styled from "styled-components";
 import navIcon1 from "../../assets/Images/nav-icon1.svg";
 import navIcon2 from "../../assets/Images/nav-icon3.svg";
-import "./Styles.css";
 import navIcon3 from "../../assets/Images/iconGit.svg";
 import navIcon4 from "../../assets/Images/iconEmail.svg";
+
+const SocialIcon = styled.div`
+  height: 60px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+`;
+
+const EmptyIcon = styled.div`
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+`;
+
+const IconLink = styled.a`
+  width: 42px;
+  height: 42px;
+  margin: 5px;
+  background: rgba(217, 217, 217, 0.1);
+  display: inline-flex;
+  border-radius: 50%;
+  margin-right: 6px;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: 1px solid rgba(87, 87, 87, 0.5);
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    background-color: #363636;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.3s ease-in-out;
+  }
+
+  &:hover::before {
+    transform: scale(1);
+  }
+
+  img {
+    width: 40%;
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+  }
+`;
 
 const NavIcons = ({ selectedIcon }) => {
   const onClickLinkedin = () => {
@@ -20,60 +75,59 @@ const NavIcons = ({ selectedIcon }) => {
 
   if (!selectedIcon) {
     return (
-      <div className="social-icon">
-        <a>
+      <SocialIcon>
+        <IconLink>
           <img src={navIcon1} alt="Icone Linkedin" onClick={onClickLinkedin} />
-        </a>
-        <a>
+        </IconLink>
+        <IconLink>
           <img src={navIcon2} alt="Icone Contato" onClick={onClickInstagram} />
-        </a>
-
-        <a>
+        </IconLink>
+        <IconLink>
           <img
             src={navIcon3}
             alt="Icone Github"
             onClick={onClickGithub}
             style={{ width: "55%", marginBottom: "3px" }}
           />
-        </a>
-      </div>
+        </IconLink>
+      </SocialIcon>
     );
   }
 
   return (
-    <div className="empty-icon">
+    <EmptyIcon>
       {selectedIcon === "linkedin" && (
-        <a>
+        <IconLink>
           <img src={navIcon1} alt="Icone Linkedin" onClick={onClickLinkedin} />
-        </a>
+        </IconLink>
       )}
       {selectedIcon === "instagram" && (
-        <a>
+        <IconLink>
           <img src={navIcon2} alt="Icone Contato" onClick={onClickInstagram} />
-        </a>
+        </IconLink>
       )}
       {selectedIcon === "github" && (
-        <a>
+        <IconLink>
           <img
             src={navIcon3}
             alt="Icone Github"
             onClick={onClickGithub}
             style={{ width: "55%", marginBottom: "3px" }}
           />
-        </a>
+        </IconLink>
       )}
 
       {selectedIcon === "email" && (
-        <a>
+        <IconLink>
           <img
             src={navIcon4}
             alt="Icone email"
             onClick={onClickEmail}
             style={{ width: "55%" }}
           />
-        </a>
+        </IconLink>
       )}
-    </div>
+    </EmptyIcon>
   );
 };
 
