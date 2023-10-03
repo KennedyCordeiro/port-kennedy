@@ -36,7 +36,7 @@ const Skills = () => {
         autoHideDuration={4000}
         onClose={handleClose}
         TransitionComponent={TransitionSlide}
-        message={"Novas Skills em desenvolvimento !"}
+        message={"Novas Skills estão sempre em desenvolvimento !"}
         action={
           <IconButton
             size="small"

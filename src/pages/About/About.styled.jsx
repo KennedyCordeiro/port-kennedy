@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: auto; /* Altere a altura para 100vh para cobrir toda a altura da página */
+  height: 100vh; /* Altere a altura para 100vh para cobrir toda a altura da página */
   display: flex;
   justify-content: space-between;
   background-color: #d7d7d7;
@@ -12,11 +12,11 @@ export const Container = styled.div`
   justify-content: flex-start;
   animation: fadeIn 0.7s ease-in-out;
   padding-bottom: 10px;
-  border-top: 1.5px solid #3b3b3b;
-  overflow-x: visible;
+  box-shadow: 18px 18px 36px #929292, 8px 8px 36px #838383;
   @media screen and (max-width: 900px) {
     align-items: center;
     padding-bottom: 20px;
+    height: auto;
   }
 
   @keyframes fadeIn {
@@ -56,13 +56,21 @@ export const DivTitle = styled.div`
     border-color: #d7d7d7;
     transition: 0.5s ease-in-out;
   }
+  @media screen and (max-width: 900px) {
+    width: 200px;
+    height: 80px;
+  }
 `;
 
 export const Title = styled.p`
   font-size: 70px;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
   display: flex;
   margin-top: 10px;
+
+  @media screen and (max-width: 900px) {
+    font-size: 50px;
+  }
 `;
 
 export const Subtitle = styled.span`
@@ -83,11 +91,6 @@ export const Column = styled.div`
   align-items: center;
   color: #3b3b3b;
   font-weight: bold;
-
-  @media screen and (max-width: 900px) {
-    font-size: 15px;
-  }
-  //width: 60%;
 `;
 
 export const Paragraph = styled.p`
@@ -95,41 +98,50 @@ export const Paragraph = styled.p`
   columns: 200px 2;
   column-gap: 30px;
   padding: 25px;
+
+  @media screen and (max-width: 900px) {
+    font-size: 15px;
+  }
+`;
+
+export const TitleSection = styled.h4`
+  margin-top: 10px;
+  font-size: 20px;
+  margin-bottom: 0px;
 `;
 
 export const BorderedSection = styled.div`
   border-top: 2px solid #3b3b3b;
   width: 60%;
-  margin: 0 auto;
+  margin-top: 0;
   padding-bottom: 0px;
   display: flex;
 `;
 
 export const SectionOptions = styled.div`
-  display: flex;
   flex-direction: column;
   align-items: center;
+  display: flex;
   color: #3b3b3b;
-  justify-content: center;
   font-weight: bold;
   flex: 1;
   & > ${BorderedSection} {
-    justify-self: flex-start;
-    display: grid;
+    //   justify-self: flex-start;
   }
 `;
 
 export const SectionOption = styled.div`
   background-color: red;
-  width: 100%;
+  width: 60%;
   height: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: 1.4px solid #3b3b3b;
+  border-top: 1px solid #3b3b3b;
   margin: 10px;
+  font-size: 20px;
+  cursor: pointer;
   // border-radius: 30px;
   background: lightgrey;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset,
-    rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
 `;

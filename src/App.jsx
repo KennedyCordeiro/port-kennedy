@@ -6,20 +6,24 @@ import About from "./pages/About";
 import NavbarFixed from "./components/navbarFixed";
 import Contact from "./pages/Contact";
 import ObserverComponent from "./components/observerComponent";
-import Container from "@mui/material/Container";
+import Parallax from "./pages/Parallax";
+import MidSection from "./pages/MidSection";
 function App() {
   return (
     <>
       <NavbarFixed />
       <ObserverComponent />
       <section id="Home" className="hidden">
-        <Home></Home>
+        <Home />
+      </section>
+      <section id="MidSection" className="hidden">
+        <MidSection />
       </section>
       <section id="Skills" className="hidden">
-        <Skills></Skills>
+        <Skills />
       </section>
       <section id="About" className="hidden">
-        <About></About>
+        <About />
       </section>
       <section id="Contact" className="hidden">
         <Contact></Contact>

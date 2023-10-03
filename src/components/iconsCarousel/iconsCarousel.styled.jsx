@@ -11,7 +11,8 @@ const CarouselItens = styled.div`
 
   @media screen and (max-width: 740px) {
     font-size: 10px;
-    height: auto;
+    height: 100%;
+    width: 80%;
   }
 `;
 
@@ -20,17 +21,24 @@ const CarouselItemImage = styled.img`
   flex: 0 0 calc(33.33% - 10px);
   object-fit: contain;
   cursor: pointer;
+
+  @media screen and (max-width: 900px) {
+    width: 50%;
+  }
 `;
 
 const Img = styled.div`
   width: 33.3%;
-  flex: 0 0 calc(33.33% - 10px);
   object-fit: contain;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  @media screen and (max-width: 900px) {
+    width: 50%;
+  }
 
   &:hover {
     transform: scale(1.1);

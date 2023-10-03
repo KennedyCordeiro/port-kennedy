@@ -1,5 +1,6 @@
 //import Back from "../../assets/Images/Rectangle.svg";
 import Back from "../../assets/Images/background/Rblack.svg";
+import BackMobile from "../../assets/Images/background/BackMobile.svg";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -22,12 +23,14 @@ export const Container = styled.div`
   @media screen and (max-width: 900px) {
     align-items: center;
     background-size: 108% auto;
+    background-position: center;
     padding-bottom: 20px;
   }
 
   @media screen and (max-width: 600px) {
     align-items: center;
-    background-size: 150% auto;
+    background-image: url(${BackMobile});
+    background-size: 460% auto;
     padding-bottom: 20px;
   }
 
@@ -39,14 +42,6 @@ export const Container = styled.div`
       opacity: 1;
     }
   }
-`;
-export const NavbarContainer = styled.div`
-  align-items: center;
-  height: 10%;
-  width: 100%;
-  justify-content: end;
-  position: fixed;
-  padding-right: 40px;
 `;
 
 export const Column = styled.div`
@@ -74,11 +69,19 @@ export const Itens = styled.div`
   top: 40%;
   left: 5%;
   flex-direction: column;
+
+  @media screen and (max-width: 900px) {
+    top: 30%;
+    width: 100%;
+    left: 0%;
+    align-items: center;
+  }
 `;
 
 export const NavIconsDiv = styled.div`
   display: flex;
   margin-top: 10px;
+  width: fit-content;
 `;
 
 export const ImagePerfilDiv = styled.div`

@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const DivSkills = styled.div`
   width: 100%;
-  height: auto;
+  height: 100vh;
   background-color: #d7d7d7;
   display: flex;
   justify-content: flex-start;
@@ -32,6 +32,10 @@ export const DivTitle = styled.div`
     color: #d7d7d7;
     border-color: #d7d7d7;
     transition: 0.5s ease-in-out;
+  }
+
+  @media screen and (max-width: 900px) {
+    width: 200px;
   }
 `;
 

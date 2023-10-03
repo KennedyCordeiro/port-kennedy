@@ -14,7 +14,6 @@
 
   @media screen and (max-width: 900px) {
     color: #d7d7d7;
-    margin-left: 50px;
   }
 }
 
@@ -34,8 +33,12 @@
 }
 
 .btn:hover {
-  color: #ffffff;
+  color: #1a1a1a;
   transition-delay: 0.5s;
+
+  @media screen and (max-width: 900px) {
+    color: #ffffff;
+  }
 }
 
 .btn:hover::before {
@@ -62,4 +65,5 @@
 .divButton {
   margin-top: 20px;
   margin-bottom: 20px;
+  width: fit-content;
 }
