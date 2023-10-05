@@ -1,6 +1,6 @@
 //import Back from "../../assets/Images/Rectangle.svg";
-import Back from "../../assets/Images/background/Rblack.svg";
-import BackMobile from "../../assets/Images/background/BackMobile.svg";
+import Back from "../../../public/Images/background/Rblack.svg";
+import BackMobile from "../../../public/Images/background/BackMobile.svg";
 import styled from "styled-components";
 
 export const Container = styled.div`

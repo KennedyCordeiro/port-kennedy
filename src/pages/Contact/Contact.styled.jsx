@@ -1,14 +1,11 @@
 import { styled } from "styled-components";
-import BackgroundContact from "../../assets/Images/contact.svg";
-import BackP from "../../assets/Images/backPurple.jpg";
 
 export const Container = styled.div`
   width: 100%;
   height: 85vh;
   display: flex;
   font-family: "Joker One", sans-serif;
-  /* background-image: url(${BackgroundContact});
-  background-position: center;
+  /*  background-position: center;
   background-repeat: no-repeat;
   background-size: cover; */
   background-color: #252333ff;
@@ -85,8 +82,6 @@ export const Column1 = styled.div`
   position: relative;
   height: 100%;
   align-items: baseline;
-  background-position: center;
-  background-image: url(${BackP});
   background-size: cover;
   @media screen and (max-width: 900px) {
     display: none;

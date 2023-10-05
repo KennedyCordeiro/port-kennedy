@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import navIcon1 from "../../assets/Images/nav-icon1.svg";
-import navIcon2 from "../../assets/Images/nav-icon3.svg";
-import navIcon3 from "../../assets/Images/iconGit.svg";
+import navIcon1 from "../../../public/Images/nav-icon1.svg";
+import navIcon2 from "../../../public/Images/nav-icon3.svg";
+import navIcon3 from "../../../public/Images/iconGit.svg";
 
 const SocialIcon = styled.div`
   height: 60px;

@@ -1,8 +1,5 @@
 import * as C from "./ImagePerfil.styled";
-import DevImage from "../../assets/Images/DevPerfil.svg";
-import DevImagee from "../../assets/Images/perfilImg.svg";
-
-//import "./styles.css";
+import DevImage from "../../../public/Images/DevPerfil.svg";
 
 const ImagePerfil = () => {
   return (

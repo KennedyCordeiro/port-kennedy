@@ -6,7 +6,6 @@ import About from "./pages/About";
 import NavbarFixed from "./components/navbarFixed";
 import Contact from "./pages/Contact";
 import ObserverComponent from "./components/observerComponent";
-import Parallax from "./pages/Parallax";
 import MidSection from "./pages/MidSection";
 function App() {
   return (

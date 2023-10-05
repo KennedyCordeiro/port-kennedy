@@ -4,18 +4,18 @@ import {
   Img,
   ImgDescription,
 } from "./iconsCarousel.styled";
-import icon1 from "../../assets/Images/icon1.svg";
-import icon2 from "../../assets/Images/icon2.svg";
-import icon3 from "../../assets/Images/icon3.svg";
-import icon4 from "../../assets/Images/icon4.svg";
-import icon5 from "../../assets/Images/icon5.svg";
-import icon6 from "../../assets/Images/icon6.svg";
-import icon7 from "../../assets/Images/iconBootstrap.svg";
-import icon8 from "../../assets/Images/iconsGit.svg";
-import icon9 from "../../assets/Images/iconHtml.svg";
-import icon10 from "../../assets/Images/iconSass.svg";
-import icon11 from "../../assets/Images/iconTypescript.svg";
-import icon12 from "../../assets/Images/iconNode.svg";
+import icon1 from "../../../public/Images/icon1.svg";
+import icon2 from "../../../public/Images/icon2.svg";
+import icon3 from "../../../public/Images/icon3.svg";
+import icon4 from "../../../public/Images/icon4.svg";
+import icon5 from "../../../public/Images/icon5.svg";
+import icon6 from "../../../public/Images/icon6.svg";
+import icon7 from "../../../public/Images/iconBootstrap.svg";
+import icon8 from "../../../public/Images/iconsGit.svg";
+import icon9 from "../../../public/Images/iconHtml.svg";
+import icon10 from "../../../public/Images/iconSass.svg";
+import icon11 from "../../../public/Images/iconTypescript.svg";
+import icon12 from "../../../public/Images/iconNode.svg";
 
 const IconsCarousel = () => {
   const onClickImage = (url) => {
