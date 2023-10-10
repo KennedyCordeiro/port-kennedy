@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: 100vh; /* Altere a altura para 100vh para cobrir toda a altura da página */
+  min-height: 100vh; /* Altere a altura para 100vh para cobrir toda a altura da página */
   display: flex;
   position: relative;
   justify-content: space-between;
@@ -10,7 +10,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  animation: fadeIn 0.7s ease-in-out;
+  animation: fadeIn 0.6s ease-in-out;
   padding-bottom: 10px;
   box-shadow: 18px 18px 36px #929292, 8px 8px 36px #838383;
   @media screen and (max-width: 900px) {
@@ -20,10 +20,13 @@ export const Container = styled.div`
   }
 
   @keyframes fadeIn {
-    from {
+    0% {
       opacity: 0;
     }
-    to {
+    50% {
+      opacity: 0.5;
+    }
+    100% {
       opacity: 1;
     }
   }
@@ -106,7 +109,7 @@ export const Paragraph = styled.p`
 
 export const TitleSection = styled.h4`
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 0px;
 `;
 
@@ -122,23 +125,103 @@ export const SeparatorImgDown = styled.div`
   top: 95%;
 `;
 
+export const AboutSection = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  padding-top: 20px;
+`;
+
 export const LineSeparator = styled.img`
   position: absolute;
-  left: 50%;
-  top: 54%;
   object-fit: contain;
-  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 20%;
   height: 42rem;
-  width: 100%;
+
+  @media screen and (max-width: 1600) {
+    height: 38rem;
+  }
+`;
+
+export const SectionSummary = styled.div`
+  flex: 50%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: 2rem 1.25rem 0 0;
+`;
+
+export const TittleSummary = styled.div`
+  font-size: 54px;
+  font-weight: bold;
+  color: #282b3c;
+  text-align: center;
+  padding: 0 1rem 0 2rem;
+`;
+
+export const TextSummary = styled.div`
+  font-size: 1.5rem;
+  font-family: "Montserrat italic", sans-serif;
+  color: #3b3b3b;
+  padding: 2rem;
+`;
+
+export const TextDescription = styled.div`
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  color: #3b3b3b;
+  padding: 2rem;
+`;
+
+export const Skill = styled.div`
+  border-radius: 10%;
+  color: #3b3b3b;
+  padding: 10px;
+  border: 1px solid #3b3b3b;
+  margin: 2px;
+  cursor: pointer;
+
+  &:hover {
+    transform-style: translateX(-100%);
+    transition: 0.4s ease-in-out;
+    background-color: #006fea;
+    color: #fff;
+  }
+`;
+
+export const DivSkills = styled.div`
+  flex-direction: row;
+  display: flex;
+  padding: 0.5rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+`;
+
+export const ColumnA = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+`;
+export const SectionItem = styled.div`
+  display: flex;
+  flex: 1;
+  height: 100%;
+  flex-direction: column;
 `;
 
 export const Icon = styled.div`
   width: 40px;
   height: 40px;
+  display: flex;
+  left: 49%;
+  margin-top: 2rem;
   border-radius: 50px;
   background-color: #282b3c;
   position: absolute;
-  left: 49%;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 
   &:hover,
@@ -146,6 +229,12 @@ export const Icon = styled.div`
     background-color: #4d5374;
     transform: scale(100%);
     transition: 0.3s ease-in-out;
+  }
+
+  @media screen and (max-width: 1600) {
+    width: 35px;
+    height: 35px;
+    left: 45%;
   }
 `;
 
@@ -176,11 +265,17 @@ export const Icon6 = styled(Icon)`
 export const DivTitleIcon = styled.div`
   font-family: Montserrat, sans-serif;
   left: 55%;
+
   color: #3b3b3b;
   font-weight: normal;
   font-size: 1.55rem;
   display: flex;
   position: absolute;
+  margin-top: 2rem;
+  cursor: pointer;
+  @media screen and (max-width: 1550px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const DivTitleIcon1 = styled(DivTitleIcon)`

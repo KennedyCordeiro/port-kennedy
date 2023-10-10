@@ -22,6 +22,10 @@
   border-radius: 4px;
 }
 
+.barsMenu {
+  background-color: #3b3b3b;
+}
+
 #bar2 {
   transition-duration: 0.8s;
 }

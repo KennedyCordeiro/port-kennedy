@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const DivSkills = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   background-color: #d7d7d7;
   display: flex;
   justify-content: flex-start;

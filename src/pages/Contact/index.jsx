@@ -92,7 +92,6 @@ const Contact = () => {
           <Loader></Loader>
         </C.LoaderDiv>
       )}
-      <C.Column1 />
       <C.Column>
         <C.TitleDiv>{"Contatos"}</C.TitleDiv>
         <C.Paragraph>
