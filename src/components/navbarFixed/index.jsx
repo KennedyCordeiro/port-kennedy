@@ -52,6 +52,10 @@ const NavbarFixed = () => {
     };
   }, []);
 
+  const handleMenu1 = () => {
+    setMenuSmart((prevState) => !prevState);
+  };
+
   return (
     <NavWrapper className={isScrolled && !menuSmart ? "black-background" : ""}>
       <NavContainer>
@@ -73,9 +77,7 @@ const NavbarFixed = () => {
       </NavContainer>
 
       <DivIcon>
-        <MenuIcon
-          HandleMenu={() => setMenuSmart((prevState) => !prevState)}
-        ></MenuIcon>
+        <MenuIcon Disable={menuSmart} HandleMenu={handleMenu1}></MenuIcon>
       </DivIcon>
 
       <NavIconsSmart as="div" menuSmart={menuSmart}>

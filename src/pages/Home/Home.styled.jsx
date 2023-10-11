@@ -1,11 +1,11 @@
 //import Back from "../../assets/Images/Rectangle.svg";
-import Back from "../../../public/Images/background/Rblack.svg";
-import BackMobile from "../../../public/Images/background/BackMobile.svg";
+import Back from "/Images/background/Rblack.svg";
+import BackMobile from "/Images/background/BackMobile.svg";
 import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: 100vh; /* Altere a altura para 100vh para cobrir toda a altura da página */
+  min-height: 100vh; /* Altere a altura para 100vh para cobrir toda a altura da página */
   display: flex;
   justify-content: space-between;
   background-color: #d7d7d7;

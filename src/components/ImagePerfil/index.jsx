@@ -1,5 +1,5 @@
 import * as C from "./ImagePerfil.styled";
-import DevImage from "../../../public/Images/DevPerfil.svg";
+import DevImage from "/Images/DevPerfil.svg";
 
 const ImagePerfil = () => {
   return (

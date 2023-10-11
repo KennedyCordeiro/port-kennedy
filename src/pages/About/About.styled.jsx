@@ -4,6 +4,8 @@ export const Container = styled.div`
   width: 100%;
   min-height: 100vh; /* Altere a altura para 100vh para cobrir toda a altura da página */
   display: flex;
+  overflow: auto;
+  overflow-y: hidden;
   position: relative;
   justify-content: space-between;
   background-color: #d7d7d7;
@@ -123,13 +125,14 @@ export const SeparatorImgDown = styled.div`
   justify-content: center;
   position: absolute;
   top: 95%;
+  padding-bottom: 2em;
+  margin-top: 2em;
 `;
 
 export const AboutSection = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-
   padding-top: 20px;
 `;
 
@@ -137,8 +140,8 @@ export const LineSeparator = styled.img`
   position: absolute;
   object-fit: contain;
   left: 50%;
-  top: 20%;
-  height: 42rem;
+  top: 18%;
+  height: 74%;
 
   @media screen and (max-width: 1600) {
     height: 38rem;
@@ -158,7 +161,13 @@ export const TittleSummary = styled.div`
   font-weight: bold;
   color: #282b3c;
   text-align: center;
-  padding: 0 1rem 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const TittleSummaryActive = styled(TittleSummary)`
+  font-size: 40px;
 `;
 
 export const TextSummary = styled.div`
@@ -169,7 +178,9 @@ export const TextSummary = styled.div`
 `;
 
 export const TextDescription = styled.div`
-  font-size: 1.2rem;
+  font-size: 1.1em;
+  display: flex;
+  flex-wrap: wrap;
   font-family: "Montserrat", sans-serif;
   color: #3b3b3b;
   padding: 2rem;
@@ -186,6 +197,35 @@ export const Skill = styled.div`
   &:hover {
     transform-style: translateX(-100%);
     transition: 0.4s ease-in-out;
+  }
+
+  &.skill1:hover,
+  &.skill1:focus {
+    background-color: #303030;
+    color: #fff;
+  }
+  &.skill2:hover,
+  &.skill2:focus {
+    background-color: #b40a0a;
+    color: #fff;
+  }
+  &.skill3:hover,
+  &.skill3:focus {
+    background-color: #167b45;
+    color: #fff;
+  }
+  &.skill4:hover,
+  &.skill4:focus {
+    background-color: #6c1287;
+    color: #fff;
+  }
+  &.skill5:hover,
+  &.skill5:focus {
+    background-color: #006fea;
+    color: #fff;
+  }
+  &.skill6:hover,
+  &.skill6:focus {
     background-color: #006fea;
     color: #fff;
   }
@@ -194,9 +234,9 @@ export const Skill = styled.div`
 export const DivSkills = styled.div`
   flex-direction: row;
   display: flex;
-  padding: 0.5rem;
   flex-wrap: wrap;
   padding: 2rem;
+  margin-bottom: 4em;
 `;
 
 export const ColumnA = styled.div`
@@ -265,7 +305,6 @@ export const Icon6 = styled(Icon)`
 export const DivTitleIcon = styled.div`
   font-family: Montserrat, sans-serif;
   left: 55%;
-
   color: #3b3b3b;
   font-weight: normal;
   font-size: 1.55rem;
