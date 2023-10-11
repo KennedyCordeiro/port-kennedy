@@ -80,6 +80,7 @@ export const NavIconsSmart = styled.div`
     top: 0px;
     width: 100%;
     height: 100vh;
+    overflow: auto;
     background-color: #27272758;
     gap: 20px;
     flex-direction: column;

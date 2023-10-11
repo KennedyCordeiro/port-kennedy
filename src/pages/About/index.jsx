@@ -6,11 +6,12 @@ import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import Line from "../../assets/Images/Line.svg";
 import Separator from "../../assets/Images/separator.svg";
-import MenuIcon from "../../components/menuIcon";
+import MenuClose from "../../components/menuClose";
 
 const About = () => {
   const [alertInfo, setAlertInfo] = useState(false);
   const [activeSection, setActiveSection] = useState(null);
+  const [menuCloseSection, setMenuCloseSection] = useState(false);
 
   const icons = [
     {
@@ -28,7 +29,6 @@ const About = () => {
         "Javascript",
         "SASS",
         "Bibliotecas JavaScript",
-
         "HTML5",
         "ASP.NET",
         "Azure DevOps",
@@ -43,6 +43,7 @@ const About = () => {
         "Experiência do usuário (UX)",
         "Design de experiência do usuário (UX)",
       ],
+      topic: "skill1",
       description:
         "Desenvolvedor Full Stack com experiência em desenvolvimento de aplicações Back-end e integração de aplicações Back-End. Conhecimento em C#, .NET framework, Solid Clean Code, contato Azure DevOps e banco de dados com Microsoft SQL Server & PostgreSQL. Experiência em metodologias ageis como Scrum. Desenvolvimento de aplicações Front-end da empresa usando React-JS, TypeScript e Javascript. Estilização de aplicações com styled components, Css e Sass. Prototipação com Figma.",
     },
@@ -50,13 +51,16 @@ const About = () => {
       sectionIcon: C.Icon2,
       title: "Bacharel em Engeharia de Software",
       titleSection: C.DivTitleIcon2,
+      topic: "skill2",
       description:
         "Formado pela Universidade Federal do Ceará(UFC) no Curso de Engenharia de Software, desde cedo consegui aplicar meus conhecimentos dentro e fora da universidade aplicando processos de Scrum e de melhorias de gestão em minha própria empresa e também em minha vida pessoal",
+      skills: [],
     },
     {
       sectionIcon: C.Icon3,
       title: "Desenvolvedor Full-Stack",
       titleSection: C.DivTitleIcon3,
+      topic: "skill3",
       description: "",
     },
     {
@@ -91,6 +95,7 @@ const About = () => {
         "Documentação de API",
         "Versionamento com Git/Github",
       ],
+      topic: "skill4",
       description:
         "Minha jornada profissional na Squadra Digital é marcada por uma ampla gama de experiências em desenvolvimento Front-End. Trabalhei com dedicação na manutenção e evolução de sistemas legados, garantindo que eles continuassem funcionando de maneira eficiente. Também tive a oportunidade de desenvolver novas funcionalidades, sempre com um olhar atento à experiência do usuário (UX/UI) e aplicando as melhores práticas de desenvolvimento.\n\nAlém disso, participei ativamente de processos de deploy de aplicações e implementação de melhorias, aproveitando tecnologias avançadas como Kubernetes e Azure DevOps para garantir uma entrega contínua e eficaz. Minhas habilidades incluem a integração com aplicações Back-End, o uso de linguagens como C#, Redux, Node-JS e React-JS, bem como a aplicação de princípios de desenvolvimento sólido e limpo (Solid Clean Code).\n\nAo longo dessa jornada, também acumulei experiência como analista de DevOps, trabalhando com Azure DevOps Server e colaborando com bancos de dados Microsoft SQL Server e MongoDB. Minha abordagem é guiada por metodologias ágeis, como o Scrum, que promovem entregas eficientes e ágeis. Além disso, estou familiarizado com a documentação de API usando Swagger e o versionamento de código com Git/Github.",
       achievements: [
@@ -111,6 +116,7 @@ const About = () => {
       sectionIcon: C.Icon5,
       title: "Freelancer",
       titleSection: C.DivTitleIcon5,
+      topic: "skill5",
       description: "",
     },
   ];
@@ -134,7 +140,7 @@ const About = () => {
     setActiveSection(section);
   };
 
-  const handleSection = () => {
+  const handleCloseSection = () => {
     setActiveSection("");
   };
 
@@ -151,9 +157,10 @@ const About = () => {
           </C.TittleSummary>
           <C.TextSummary>
             {" "}
-            Os maiores desafios moldam os melhores profissionais, anseio por
-            mais e mais experiências para me aprimorar ainda mais e me tornar o
-            melhor no que faço.{" "}
+            Com duas experiências sólidas em desenvolvimento Full Stack e como
+            desenvolvedor Front-End busco estar sempre acompanhando as melhores
+            tecnologias do mercado para aplicar em meus projetos, e com isso me
+            tornar um profissional cada vez melhor.{" "}
           </C.TextSummary>
         </C.SectionSummary>
         <C.LineSeparator src={Line} className="Line" />
@@ -170,13 +177,17 @@ const About = () => {
 
           {activeSection && (
             <>
-              <MenuIcon HandleMenu={() => handleSection} className={"active"} />
-              <C.TittleSummary>{activeSection.title}</C.TittleSummary>
+              <C.TittleSummaryActive>
+                {activeSection.title}
+                <MenuClose HandleMenu={handleCloseSection} />
+              </C.TittleSummaryActive>
               <C.TextDescription>{activeSection.description}</C.TextDescription>
               <C.DivSkills>
                 {activeSection.skills &&
                   activeSection.skills.map((skill, index) => (
-                    <C.Skill key={index}>{skill}</C.Skill>
+                    <C.Skill key={index} className={activeSection.topic}>
+                      {skill}
+                    </C.Skill>
                   ))}
               </C.DivSkills>
             </>
@@ -184,7 +195,6 @@ const About = () => {
         </C.SectionSummary>
       </C.AboutSection>
 
-      <C.MidSection></C.MidSection>
       <Snackbar
         open={alertInfo}
         onClose={handleClose}
