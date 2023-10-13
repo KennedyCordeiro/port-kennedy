@@ -34,6 +34,7 @@ export const DivTitle = styled.div`
 
   @media screen and (max-width: 900px) {
     width: 200px;
+    height: 60px;
   }
 `;
 

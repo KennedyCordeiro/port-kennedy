@@ -11,12 +11,11 @@ import MenuClose from "../../components/menuClose";
 const About = () => {
   const [alertInfo, setAlertInfo] = useState(false);
   const [activeSection, setActiveSection] = useState(null);
-  const [menuCloseSection, setMenuCloseSection] = useState(false);
 
   const icons = [
     {
       sectionIcon: C.Icon1,
-      title: "FitBank 450",
+      title: "Desenvolvedor Full-Stack Fitbank 450",
       titleSection: C.DivTitleIcon1,
       skills: [
         "Swagger API",
@@ -43,30 +42,34 @@ const About = () => {
         "Experiência do usuário (UX)",
         "Design de experiência do usuário (UX)",
       ],
-      topic: "skill1",
+      topic: "skill3",
       description:
         "Desenvolvedor Full Stack com experiência em desenvolvimento de aplicações Back-end e integração de aplicações Back-End. Conhecimento em C#, .NET framework, Solid Clean Code, contato Azure DevOps e banco de dados com Microsoft SQL Server & PostgreSQL. Experiência em metodologias ageis como Scrum. Desenvolvimento de aplicações Front-end da empresa usando React-JS, TypeScript e Javascript. Estilização de aplicações com styled components, Css e Sass. Prototipação com Figma.",
     },
     {
       sectionIcon: C.Icon2,
-      title: "Bacharel em Engeharia de Software",
+      title: "Engenheiro de Software - UFC",
       titleSection: C.DivTitleIcon2,
       topic: "skill2",
       description:
         "Formado pela Universidade Federal do Ceará(UFC) no Curso de Engenharia de Software, desde cedo consegui aplicar meus conhecimentos dentro e fora da universidade aplicando processos de Scrum e de melhorias de gestão em minha própria empresa e também em minha vida pessoal",
-      skills: [],
+      skills: [
+        "Scrum",
+        "Software Engineer",
+        "Web Development",
+        "Agile Development",
+        "Kanban",
+        "UX/UI Interface",
+        "Design UX",
+        "Product Design",
+        "Software architecture ",
+      ],
     },
     {
       sectionIcon: C.Icon3,
-      title: "Desenvolvedor Full-Stack",
+      title: "Desenvolvedor Front-End Squadra Digital",
       titleSection: C.DivTitleIcon3,
-      topic: "skill3",
-      description: "",
-    },
-    {
-      sectionIcon: C.Icon4,
-      title: "Desenvolvedor Front-End",
-      titleSection: C.DivTitleIcon4,
+
       skills: [
         "Desenvolvimento Front-End",
         "Manutenção de Sistemas Legados",
@@ -97,27 +100,17 @@ const About = () => {
       ],
       topic: "skill4",
       description:
-        "Minha jornada profissional na Squadra Digital é marcada por uma ampla gama de experiências em desenvolvimento Front-End. Trabalhei com dedicação na manutenção e evolução de sistemas legados, garantindo que eles continuassem funcionando de maneira eficiente. Também tive a oportunidade de desenvolver novas funcionalidades, sempre com um olhar atento à experiência do usuário (UX/UI) e aplicando as melhores práticas de desenvolvimento.\n\nAlém disso, participei ativamente de processos de deploy de aplicações e implementação de melhorias, aproveitando tecnologias avançadas como Kubernetes e Azure DevOps para garantir uma entrega contínua e eficaz. Minhas habilidades incluem a integração com aplicações Back-End, o uso de linguagens como C#, Redux, Node-JS e React-JS, bem como a aplicação de princípios de desenvolvimento sólido e limpo (Solid Clean Code).\n\nAo longo dessa jornada, também acumulei experiência como analista de DevOps, trabalhando com Azure DevOps Server e colaborando com bancos de dados Microsoft SQL Server e MongoDB. Minha abordagem é guiada por metodologias ágeis, como o Scrum, que promovem entregas eficientes e ágeis. Além disso, estou familiarizado com a documentação de API usando Swagger e o versionamento de código com Git/Github.",
-      achievements: [
-        "Desenvolvimento e sustentação de aplicações Front-end",
-        "Implementação bem-sucedida com React-Js & Node-Js",
-        "Utilização de TypeScript para melhorar a qualidade do código.",
-        "Integração eficiente com API’s utilizando Ajax.",
-        "Sustentação eficaz em código legado",
-        "Aplicação das metodologias ágeis, como Scrum, para entregas mais ágeis e eficientes.",
-        "Desenvolvimento e manutenção de aplicações utilizando jQuery",
-        "Estilização de aplicações com foco em HTML5 / CSS3 / Javascript / Bootstrap",
-        "Atuação como analista de UI/UX, garantindo uma experiência de usuário de alta qualidade.",
-        "Excelência em Web Design e engenharia de software.",
-      ],
+        "Minha jornada profissional na Squadra Digital é marcada por uma ampla gama de experiências em desenvolvimento Full-Stack. Trabalhei com dedicação na manutenção e evolução de sistemas legados, garantindo que eles continuassem funcionando de maneira eficiente e construindo novas funcionalidades para os usuários. Também tive a oportunidade de desenvolver novas funcionalidades, sempre com um olhar atento à experiência do usuário (UX/UI) e aplicando as melhores práticas de desenvolvimento.\n\nAlém disso, participei ativamente de processos de deploy de aplicações e implementação de melhorias, aproveitando tecnologias avançadas como Kubernetes e Azure DevOps para garantir uma entrega contínua e eficaz. Minhas habilidades incluem a integração com aplicações Back-End, o uso de linguagens como C#, Redux, Node-JS e React-JS, JQuery, HTML5, CSS3, bem como a aplicação de princípios de desenvolvimento sólido e limpo (Solid Clean Code).\n\nAo longo dessa jornada, também acumulei experiência como analista de DevOps, trabalhando com Azure DevOps Server e colaborando com bancos de dados Microsoft SQL Server e MongoDB. Minha abordagem é guiada por metodologias ágeis, como o Scrum, que promovem entregas eficientes e ágeis. Além disso, estou familiarizado com a documentação de API usando Swagger e o versionamento de código com Git/Github.",
     },
 
     {
-      sectionIcon: C.Icon5,
+      sectionIcon: C.Icon4,
       title: "Freelancer",
-      titleSection: C.DivTitleIcon5,
+      titleSection: C.DivTitleIcon4,
       topic: "skill5",
-      description: "",
+      description:
+        "Como Freelancer foquei bastante em aprender novas tecnologias e me alinhar mais com as dependências do mercado, novas skills foram adquiridas e aprimoradas como Vue, Next-JS, Java com spring boot e Angulas",
+      skills: ["Vue-JS", "Next-JS", "Java", "Spring Boot", "Typescript"],
     },
   ];
   const TransitionSlide = (props) => {
@@ -192,6 +185,17 @@ const About = () => {
               </C.DivSkills>
             </>
           )}
+
+          <C.MobileContent>
+            {icons.map((icon, index) => (
+              <div key={index} className={`icon-section-hidden icon-${index}`}>
+                <icon.sectionIcon onClick={() => handleIcon(icon)} />
+                <icon.titleSection onClick={() => handleIcon(icon)}>
+                  {icon.title}
+                </icon.titleSection>
+              </div>
+            ))}
+          </C.MobileContent>
         </C.SectionSummary>
       </C.AboutSection>
 

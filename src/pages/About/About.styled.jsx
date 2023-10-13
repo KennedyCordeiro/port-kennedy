@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  min-height: 100vh; /* Altere a altura para 100vh para cobrir toda a altura da página */
+  min-height: 100vh;
   display: flex;
   overflow: auto;
   overflow-y: hidden;
@@ -21,7 +21,12 @@ export const Container = styled.div`
   }
   @media screen and (max-width: 1600px) {
     min-height: 110vh;
-    background-color: red;
+    //    background-color: red;
+  }
+
+  @media screen and (max-width: 600px) {
+    align-items: center;
+    padding-bottom: 20px;
   }
 
   @keyframes fadeIn {
@@ -36,16 +41,10 @@ export const Container = styled.div`
     }
   }
 `;
-export const MidSection = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  font-family: Raleway, sans-serif;
-`;
 
 export const DivTitle = styled.div`
   width: 500px;
-  height: 105px;
+  height: 80px;
   margin: 20px 0 40px 0;
   border: 1px solid;
   border-radius: 20% 0 20% 0;
@@ -66,7 +65,7 @@ export const DivTitle = styled.div`
   }
   @media screen and (max-width: 900px) {
     width: 200px;
-    height: 80px;
+    height: 60px;
   }
 `;
 
@@ -79,12 +78,9 @@ export const Title = styled.p`
   @media screen and (max-width: 900px) {
     font-size: 50px;
   }
-`;
-
-export const Subtitle = styled.span`
-  font-size: 15px;
-  margin-top: -20px;
-  margin-bottom: 10px;
+  @media screen and (max-width: 600px) {
+    font-size: 40px;
+  }
 `;
 
 export const Column = styled.div`
@@ -132,6 +128,9 @@ export const AboutSection = styled.div`
   display: flex;
   justify-content: center;
   padding-top: 20px;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 export const LineSeparator = styled.img`
@@ -139,11 +138,15 @@ export const LineSeparator = styled.img`
   object-fit: contain;
   left: 50%;
   top: 20%;
-  height: 74%;
+  height: 70%;
 
   @media screen and (max-width: 1600px) {
     margin-top: 4em;
     height: 66%;
+  }
+
+  @media screen and (max-width: 600px) {
+    display: none;
   }
 `;
 
@@ -165,6 +168,19 @@ export const TittleSummary = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 600px) {
+    font-size: 34px;
+  }
+`;
+
+export const TextDescription = styled.div`
+  font-size: 1.1em;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Montserrat", sans-serif;
+  color: #3b3b3b;
+  padding: 2rem;
 `;
 
 export const TittleSummaryActive = styled(TittleSummary)`
@@ -176,20 +192,20 @@ export const TextSummary = styled.div`
   font-family: "Montserrat italic", sans-serif;
   color: #3b3b3b;
   padding: 2rem;
+  text-align: center;
 
   @media screen and (max-width: 1600px) {
     font-size: 1.2rem;
     margin-top: 0.5em;
   }
-`;
 
-export const TextDescription = styled.div`
-  font-size: 1.1em;
-  display: flex;
-  flex-wrap: wrap;
-  font-family: "Montserrat", sans-serif;
-  color: #3b3b3b;
-  padding: 2rem;
+  @media screen and (max-width: 600px) {
+    padding: 10px;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 1.1em;
+    font-family: "Raleway", sans-serif;
+  }
 `;
 
 export const Skill = styled.div`
@@ -257,7 +273,6 @@ export const Icon = styled.div`
   height: 40px;
   display: flex;
   left: 49%;
-  margin-top: 2rem;
   border-radius: 50px;
   background-color: #282b3c;
   position: absolute;
@@ -278,22 +293,26 @@ export const Icon = styled.div`
     width: 32px;
     height: 32px;
   }
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const Icon1 = styled(Icon)`
-  top: 20%;
+  top: 30%;
 `;
 
 export const Icon2 = styled(Icon)`
-  top: 35%;
+  top: 45%;
 `;
 
 export const Icon3 = styled(Icon)`
-  top: 50%;
+  top: 60%;
 `;
 
 export const Icon4 = styled(Icon)`
-  top: 65%;
+  top: 75%;
 `;
 
 export const Icon5 = styled(Icon)`
@@ -312,29 +331,31 @@ export const DivTitleIcon = styled.div`
   font-size: 1.55rem;
   display: flex;
   position: absolute;
-  margin-top: 2rem;
   cursor: pointer;
   @media screen and (max-width: 1550px) {
     font-size: 1.2rem;
     margin-top: 2.5em;
   }
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const DivTitleIcon1 = styled(DivTitleIcon)`
-  top: 20%;
+  top: 30%;
 `;
 export const DivTitleIcon2 = styled(DivTitleIcon)`
-  top: 35%;
+  top: 45%;
 `;
 export const DivTitleIcon3 = styled(DivTitleIcon)`
-  top: 50%;
+  top: 60%;
 `;
 export const DivTitleIcon4 = styled(DivTitleIcon)`
-  top: 65%;
+  top: 75%;
 `;
-export const DivTitleIcon5 = styled(DivTitleIcon)`
-  top: 80%;
-`;
-export const DivTitleIcon6 = styled(DivTitleIcon)`
-  top: 95%;
+
+export const MobileContent = styled.div`
+  width: 100%;
+  background-color: red;
+  font-family: "Raleway", sans-serif;
 `;
