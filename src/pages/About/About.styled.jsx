@@ -18,7 +18,10 @@ export const Container = styled.div`
   @media screen and (max-width: 900px) {
     align-items: center;
     padding-bottom: 20px;
-    height: 120vh;
+  }
+  @media screen and (max-width: 1600px) {
+    min-height: 110vh;
+    background-color: red;
   }
 
   @keyframes fadeIn {
@@ -84,10 +87,6 @@ export const Subtitle = styled.span`
   margin-bottom: 10px;
 `;
 
-export const WidgetDIv = styled.div`
-  background-color: red;
-`;
-
 export const Column = styled.div`
   flex-wrap: wrap;
   flex-direction: column;
@@ -125,8 +124,7 @@ export const SeparatorImgDown = styled.div`
   justify-content: center;
   position: absolute;
   top: 95%;
-  padding-bottom: 2em;
-  margin-top: 2em;
+  margin-top: 1em;
 `;
 
 export const AboutSection = styled.div`
@@ -140,20 +138,23 @@ export const LineSeparator = styled.img`
   position: absolute;
   object-fit: contain;
   left: 50%;
-  top: 18%;
+  top: 20%;
   height: 74%;
 
-  @media screen and (max-width: 1600) {
-    height: 38rem;
+  @media screen and (max-width: 1600px) {
+    margin-top: 4em;
+    height: 66%;
   }
 `;
 
 export const SectionSummary = styled.div`
   flex: 50%;
   display: flex;
-  height: 100%;
   flex-direction: column;
   padding: 2rem 1.25rem 0 0;
+  @media screen and (max-width: 1600px) {
+    padding: 0 1.25rem 0 0;
+  }
 `;
 
 export const TittleSummary = styled.div`
@@ -175,6 +176,11 @@ export const TextSummary = styled.div`
   font-family: "Montserrat italic", sans-serif;
   color: #3b3b3b;
   padding: 2rem;
+
+  @media screen and (max-width: 1600px) {
+    font-size: 1.2rem;
+    margin-top: 0.5em;
+  }
 `;
 
 export const TextDescription = styled.div`
@@ -239,11 +245,6 @@ export const DivSkills = styled.div`
   margin-bottom: 4em;
 `;
 
-export const ColumnA = styled.div`
-  flex: 1;
-  display: flex;
-  justify-content: flex-start;
-`;
 export const SectionItem = styled.div`
   display: flex;
   flex: 1;
@@ -271,10 +272,11 @@ export const Icon = styled.div`
     transition: 0.3s ease-in-out;
   }
 
-  @media screen and (max-width: 1600) {
-    width: 35px;
-    height: 35px;
-    left: 45%;
+  @media screen and (max-width: 1600px) {
+    left: 49%;
+    margin-top: 3em;
+    width: 32px;
+    height: 32px;
   }
 `;
 
@@ -314,6 +316,7 @@ export const DivTitleIcon = styled.div`
   cursor: pointer;
   @media screen and (max-width: 1550px) {
     font-size: 1.2rem;
+    margin-top: 2.5em;
   }
 `;
 

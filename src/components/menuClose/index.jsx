@@ -25,7 +25,7 @@ const keyframesReturn = keyframes`
 `;
 
 const Container = styled.label`
-  --color: #a5a5b0;
+  --color: #353951;
   --size: 30px;
   display: flex;
   justify-content: center;
