@@ -66,7 +66,7 @@ export const MidSection = styled.div`
 export const Itens = styled.div`
   display: flex;
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 5%;
   flex-direction: column;
 

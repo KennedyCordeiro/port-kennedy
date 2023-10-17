@@ -146,7 +146,10 @@ export const LineSeparator = styled.img`
   }
 
   @media screen and (max-width: 600px) {
-    display: none;
+    display: flex;
+    height: 45%;
+    top: 40%;
+    left: 10%;
   }
 `;
 
@@ -185,6 +188,10 @@ export const TextDescription = styled.div`
 
 export const TittleSummaryActive = styled(TittleSummary)`
   font-size: 40px;
+
+  @media screen and (max-width: 600px) {
+    font-size: 30px;
+  }
 `;
 
 export const TextSummary = styled.div`
@@ -205,6 +212,8 @@ export const TextSummary = styled.div`
     margin-top: 5px;
     font-size: 1.1em;
     font-family: "Raleway", sans-serif;
+    display: none;
+    text-align: left;
   }
 `;
 
@@ -295,7 +304,11 @@ export const Icon = styled.div`
   }
 
   @media screen and (max-width: 600px) {
-    display: none;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    left: 8.5%;
+    margin-top: 22%;
   }
 `;
 
@@ -337,7 +350,10 @@ export const DivTitleIcon = styled.div`
     margin-top: 2.5em;
   }
   @media screen and (max-width: 600px) {
-    display: none;
+    display: flex;
+    font-size: 0.9rem;
+    margin-top: 22%;
+    left: 20%;
   }
 `;
 

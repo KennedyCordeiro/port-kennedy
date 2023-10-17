@@ -7,6 +7,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import Line from "../../assets/Images/Line.svg";
 import Separator from "../../assets/Images/separator.svg";
 import MenuClose from "../../components/menuClose";
+import TextAnimation from "../../components/TextAnimation";
 
 const About = () => {
   const [alertInfo, setAlertInfo] = useState(false);
@@ -185,17 +186,6 @@ const About = () => {
               </C.DivSkills>
             </>
           )}
-
-          <C.MobileContent>
-            {icons.map((icon, index) => (
-              <div key={index} className={`icon-section-hidden icon-${index}`}>
-                <icon.sectionIcon onClick={() => handleIcon(icon)} />
-                <icon.titleSection onClick={() => handleIcon(icon)}>
-                  {icon.title}
-                </icon.titleSection>
-              </div>
-            ))}
-          </C.MobileContent>
         </C.SectionSummary>
       </C.AboutSection>
 

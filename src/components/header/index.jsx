@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import "./Header.styles.css";
 import "animate.css";
+import * as C from "./Header.styled";
 
 const Header = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -56,15 +56,17 @@ const Header = () => {
   };
 
   return (
-    <div className="banner-content">
-      <a className="profile">{TextTitle}</a>
-
-      <div className="txt-rotate">
-        <h3>
-          <span className="wrap">{text}</span>
-        </h3>
-      </div>
-    </div>
+    <C.BannerContent>
+      <C.Profile>
+        {TextTitle}
+        {/* <span /> */}
+      </C.Profile>
+      <C.TxtRotate>
+        <C.BannerH3>
+          <C.Wrap>{text}</C.Wrap>
+        </C.BannerH3>
+      </C.TxtRotate>
+    </C.BannerContent>
   );
 };
 
