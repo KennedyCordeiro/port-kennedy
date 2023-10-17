@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 
 // Define os estilos de animação
 const keyframesFill = keyframes`
@@ -23,10 +23,16 @@ const keyframesReturn = keyframes`
     transform: rotate(0deg) scale(1.2);
   }
 `;
+const iconSize = css`
+  --size: 30px;
 
+  @media (max-width: 768px) {
+    --size: 20px;
+  }
+`;
 const Container = styled.label`
   --color: #353951;
-  --size: 30px;
+  ${iconSize}
   display: flex;
   justify-content: center;
   align-items: center;
