@@ -147,8 +147,8 @@ export const LineSeparator = styled.img`
 
   @media screen and (max-width: 600px) {
     display: flex;
-    height: 45%;
-    top: 40%;
+    height: 52%;
+    top: 24%;
     left: 10%;
   }
 `;
@@ -308,7 +308,7 @@ export const Icon = styled.div`
     width: 20px;
     height: 20px;
     left: 8.5%;
-    margin-top: 22%;
+    margin-top: 7%;
   }
 `;
 
@@ -351,8 +351,8 @@ export const DivTitleIcon = styled.div`
   }
   @media screen and (max-width: 600px) {
     display: flex;
-    font-size: 0.9rem;
-    margin-top: 22%;
+    font-size: 1em;
+    margin-top: 6.5%;
     left: 20%;
   }
 `;
