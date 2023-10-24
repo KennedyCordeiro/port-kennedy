@@ -6,9 +6,9 @@ export const Container = styled.div`
   display: flex;
   overflow: auto;
   overflow-y: hidden;
-  position: relative;
   justify-content: space-between;
-  background-color: #d7d7d7;
+  color: #d7d7d7;
+  background-color: #282b3c;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
@@ -48,18 +48,19 @@ export const DivTitle = styled.div`
   margin: 20px 0 40px 0;
   border: 1px solid;
   border-radius: 20% 0 20% 0;
-  border-color: #3b3b3b;
+  border-color: #d7d7d7;
   flex-direction: column;
   align-items: center;
   display: flex;
   justify-content: center;
   font-family: "Joker One", sans-serif;
   font-weight: bold;
-  color: #3b3b3b;
+  color: #d7d7d7;
   cursor: pointer;
+
   &:hover {
-    background-color: #3b3b3b;
-    color: #d7d7d7;
+    color: #3b3b3b;
+    background-color: #d7d7d7;
     border-color: #d7d7d7;
     transition: 0.5s ease-in-out;
   }
@@ -70,7 +71,7 @@ export const DivTitle = styled.div`
 `;
 
 export const Title = styled.p`
-  font-size: 70px;
+  font-size: 65px;
   margin-bottom: 10px;
   display: flex;
   margin-top: 10px;
@@ -89,7 +90,7 @@ export const Column = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
-  color: #3b3b3b;
+  color: #d7d7d7;
   font-weight: bold;
 `;
 
@@ -148,8 +149,8 @@ export const LineSeparator = styled.img`
   @media screen and (max-width: 600px) {
     display: flex;
     height: 52%;
-    top: 24%;
-    left: 10%;
+    top: 18%;
+    left: 5%;
   }
 `;
 
@@ -160,6 +161,11 @@ export const SectionSummary = styled.div`
   padding: 2rem 1.25rem 0 0;
   @media screen and (max-width: 1600px) {
     padding: 0 1.25rem 0 0;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    padding: 2rem 1.25rem 0 1.25rem; /* Adicione um padding no lado direito para garantir que o conteúdo não saia da tela */
   }
 `;
 
@@ -173,7 +179,7 @@ export const TittleSummary = styled.div`
   justify-content: center;
 
   @media screen and (max-width: 600px) {
-    font-size: 34px;
+    font-size: 30px;
   }
 `;
 
@@ -182,22 +188,32 @@ export const TextDescription = styled.div`
   display: flex;
   flex-wrap: wrap;
   font-family: "Montserrat", sans-serif;
-  color: #3b3b3b;
+  color: #d7d7d7;
   padding: 2rem;
+  @media screen and (max-width: 600px) {
+    padding: 1em 1em 1em 2em;
+    width: 100%;
+    position: relative;
+    font-size: 0.9em;
+  }
 `;
 
 export const TittleSummaryActive = styled(TittleSummary)`
   font-size: 40px;
 
   @media screen and (max-width: 600px) {
-    font-size: 30px;
+    font-size: 17px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
 export const TextSummary = styled.div`
   font-size: 1.5rem;
   font-family: "Montserrat italic", sans-serif;
-  color: #3b3b3b;
+  color: #d7d7d7;
   padding: 2rem;
   text-align: center;
 
@@ -217,14 +233,29 @@ export const TextSummary = styled.div`
   }
 `;
 
+export const DivSkills = styled.div`
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5em 0.5em 0em 2em;
+  margin-bottom: 4em;
+  width: 100%;
+`;
+
 export const Skill = styled.div`
   border-radius: 10%;
-  color: #3b3b3b;
+  color: #d7d7d7;
   padding: 10px;
   border: 1px solid #3b3b3b;
   margin: 2px;
   cursor: pointer;
 
+  @media screen and (max-width: 600px) {
+    margin: 1px;
+    border: 0.5px solid #3b3b3b;
+    font-size: 0.8em;
+    padding: 5px;
+  }
   &:hover {
     transform-style: translateX(-100%);
     transition: 0.4s ease-in-out;
@@ -260,14 +291,6 @@ export const Skill = styled.div`
     background-color: #006fea;
     color: #fff;
   }
-`;
-
-export const DivSkills = styled.div`
-  flex-direction: row;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 2rem;
-  margin-bottom: 4em;
 `;
 
 export const SectionItem = styled.div`
@@ -307,8 +330,8 @@ export const Icon = styled.div`
     display: flex;
     width: 20px;
     height: 20px;
-    left: 8.5%;
-    margin-top: 7%;
+    left: 3%;
+    margin-top: -7%;
   }
 `;
 
@@ -339,7 +362,7 @@ export const Icon6 = styled(Icon)`
 export const DivTitleIcon = styled.div`
   font-family: Montserrat, sans-serif;
   left: 55%;
-  color: #3b3b3b;
+  color: #d7d7d7;
   font-weight: normal;
   font-size: 1.55rem;
   display: flex;
@@ -352,8 +375,8 @@ export const DivTitleIcon = styled.div`
   @media screen and (max-width: 600px) {
     display: flex;
     font-size: 1em;
-    margin-top: 6.5%;
-    left: 20%;
+    margin-top: -7.5%;
+    left: 12%;
   }
 `;
 
@@ -371,7 +394,87 @@ export const DivTitleIcon4 = styled(DivTitleIcon)`
 `;
 
 export const MobileContent = styled.div`
-  width: 100%;
-  background-color: red;
   font-family: "Raleway", sans-serif;
+  width: 100%;
+`;
+
+//********************** NEW Design *************
+
+export const NewDivDesign = styled.div`
+  width: 80%;
+  height: 90%;
+  flex-direction: row;
+  display: flex;
+  align-items: baseline;
+  font-family: "Raleway", sans-serif;
+
+  justify-content: center;
+`;
+
+export const DivTitleNew = styled.div`
+  font-size: 35px;
+  color: #d7d7d7;
+  font-weight: bold;
+  margin-top: 20px;
+`;
+
+export const NewColumn = styled.div`
+  flex: 1;
+  display: flex;
+  margin-top: 2%;
+  align-items: center;
+  justify-content: center;
+  color: #d7d7d7;
+  font-family: "Raleway", sans-serif;
+  flex-direction: column;
+`;
+
+export const NewTittle = styled.div`
+  font-weight: bolder;
+  font-size: 25px;
+`;
+
+export const SubTittle = styled.div`
+  font-size: 15px;
+  font-weight: lighter;
+  color: #3b3b3b;
+`;
+
+export const Card = styled.div`
+  width: 80%;
+  height: auto;
+  border-radius: 20px;
+  padding: 5px;
+  font-family: "Poppins", sans-serif;
+  margin: 2%;
+  box-shadow: rgba(178, 166, 166, 0.2) 0 15px 30px -5px;
+  background-image: linear-gradient(144deg, #4f246d, #452fd3 50%, #0b5b61);
+  .card__content {
+    background: #282b3c;
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+export const TittleCard = styled.div`
+  font-size: 22px;
+  font-weight: 600;
+  width: 96%;
+  border-radius: 16px;
+  display: flex;
+  padding: 10px;
+  background-color: rgb(5, 6, 45);
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+`;
+
+export const DescriptionCard = styled.div`
+  font-size: 15px;
+  font-weight: 200;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 10px 10px 20px;
 `;

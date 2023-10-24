@@ -8,7 +8,7 @@ const ToggleIcon = ({ Disable, HandleMenu }) => {
         id="checkbox"
         type="checkbox"
         onClick={HandleMenu}
-        checked={Disable}
+        defaultChecked={Disable}
       />
       <label className="toggle" htmlFor="checkbox">
         <div id="bar1" className="bars"></div>

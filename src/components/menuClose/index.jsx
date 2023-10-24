@@ -88,7 +88,7 @@ const MenuClose = ({ Disable, HandleMenu }) => {
     <Container style={{ marginLeft: "20px" }}>
       <input
         type="checkbox"
-        checked={Disable ? Disable : active}
+        defaultChecked={Disable ? Disable : active}
         onClick={handleButtonClick}
       />
       <svg

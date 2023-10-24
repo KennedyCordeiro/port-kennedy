@@ -5,7 +5,8 @@ import Slide from "@mui/material/Slide";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import Line from "../../assets/Images/Line.svg";
-import Separator from "../../assets/Images/separator.svg";
+import Separato from "../../components/separator";
+import Separator from "../../assets/Images/separatorWhite.svg"; // Certifique-se de usar `ReactComponent` para carregar o SVG
 import MenuClose from "../../components/menuClose";
 import TextAnimation from "../../components/TextAnimation";
 
@@ -13,7 +14,7 @@ const About = () => {
   const [alertInfo, setAlertInfo] = useState(false);
   const [activeSection, setActiveSection] = useState(null);
 
-  const icons = [
+  const CardsExperience = [
     {
       sectionIcon: C.Icon1,
       title: "Desenvolvedor Full-Stack Fitbank 450",
@@ -47,25 +48,7 @@ const About = () => {
       description:
         "Desenvolvedor Full Stack com experiência em desenvolvimento de aplicações Back-end e integração de aplicações Back-End. Conhecimento em C#, .NET framework, Solid Clean Code, contato Azure DevOps e banco de dados com Microsoft SQL Server & PostgreSQL. Experiência em metodologias ageis como Scrum. Desenvolvimento de aplicações Front-end da empresa usando React-JS, TypeScript e Javascript. Estilização de aplicações com styled components, Css e Sass. Prototipação com Figma.",
     },
-    {
-      sectionIcon: C.Icon2,
-      title: "Engenheiro de Software - UFC",
-      titleSection: C.DivTitleIcon2,
-      topic: "skill2",
-      description:
-        "Formado pela Universidade Federal do Ceará(UFC) no Curso de Engenharia de Software, desde cedo consegui aplicar meus conhecimentos dentro e fora da universidade aplicando processos de Scrum e de melhorias de gestão em minha própria empresa e também em minha vida pessoal",
-      skills: [
-        "Scrum",
-        "Software Engineer",
-        "Web Development",
-        "Agile Development",
-        "Kanban",
-        "UX/UI Interface",
-        "Design UX",
-        "Product Design",
-        "Software architecture ",
-      ],
-    },
+
     {
       sectionIcon: C.Icon3,
       title: "Desenvolvedor Front-End Squadra Digital",
@@ -114,6 +97,47 @@ const About = () => {
       skills: ["Vue-JS", "Next-JS", "Java", "Spring Boot", "Typescript"],
     },
   ];
+
+  const AcademicExperience = [
+    {
+      sectionIcon: C.Icon2,
+      title: "Engenheiro de Software - UFC",
+      titleSection: C.DivTitleIcon2,
+      topic: "skill2",
+      description:
+        "Formado pela Universidade Federal do Ceará(UFC) no Curso de Engenharia de Software, desde cedo consegui aplicar meus conhecimentos dentro e fora da universidade aplicando processos de Scrum e de melhorias de gestão em minha própria empresa e também em minha vida pessoal",
+      skills: [
+        "Scrum",
+        "Software Engineer",
+        "Web Development",
+        "Agile Development",
+        "Kanban",
+        "UX/UI Interface",
+        "Design UX",
+        "Product Design",
+        "Software architecture ",
+      ],
+    },
+    {
+      sectionIcon: C.Icon2,
+      title: "Curso de Clean Code in Solid - Udemy",
+      titleSection: C.DivTitleIcon2,
+      topic: "skill2",
+      description:
+        "Visando atender e melhorar minha codificação fiz cursos para que isto fosse possível da melhor forma",
+      skills: [
+        "Scrum",
+        "Software Engineer",
+        "Web Development",
+        "Agile Development",
+        "Kanban",
+        "UX/UI Interface",
+        "Design UX",
+        "Product Design",
+        "Software architecture ",
+      ],
+    },
+  ];
   const TransitionSlide = (props) => {
     return <Slide {...props} direction="right" />;
   };
@@ -141,10 +165,40 @@ const About = () => {
   return (
     <C.Container>
       <C.DivTitle>
-        <C.Title onClick={handleInfo}>About</C.Title>
+        <C.Title onClick={handleInfo}>Sobre mim</C.Title>
       </C.DivTitle>
-      <C.SeparatorImg src={Separator} />
-      <C.AboutSection>
+      <img src={Separator} alt="Separator" style={{ fill: "#fff" }} />
+      {/* <C.DivTitleNew>Tudo que rolou até agora</C.DivTitleNew> */}
+      <C.NewDivDesign>
+        <C.NewColumn>
+          <C.NewTittle>Experiencia Profissional</C.NewTittle>
+          <C.SubTittle>2020 - Atual</C.SubTittle>
+
+          {CardsExperience.map((icon, index) => (
+            <C.Card key={index}>
+              <div className="card__content">
+                <C.TittleCard>{icon.title}</C.TittleCard>
+                <C.DescriptionCard>{icon.description}</C.DescriptionCard>
+              </div>
+            </C.Card>
+          ))}
+        </C.NewColumn>
+
+        <C.NewColumn>
+          <C.NewTittle>Experiencia Academica</C.NewTittle>
+          <C.SubTittle>2016 - Atual</C.SubTittle>
+          {AcademicExperience.map((icon, index) => (
+            <C.Card key={index}>
+              <div className="card__content">
+                <C.TittleCard>{icon.title}</C.TittleCard>
+                <C.DescriptionCard>{icon.description}</C.DescriptionCard>
+                <br />
+              </div>
+            </C.Card>
+          ))}
+        </C.NewColumn>
+      </C.NewDivDesign>
+      {/* <C.AboutSection>
         <C.SectionSummary>
           <C.TittleSummary style={{ textAlign: "initial" }}>
             Experiência
@@ -170,7 +224,7 @@ const About = () => {
             ))}
 
           {activeSection && (
-            <>
+            <C.MobileContent>
               <C.TittleSummaryActive>
                 {activeSection.title}
                 <MenuClose HandleMenu={handleCloseSection} />
@@ -184,10 +238,10 @@ const About = () => {
                     </C.Skill>
                   ))}
               </C.DivSkills>
-            </>
+            </C.MobileContent>
           )}
         </C.SectionSummary>
-      </C.AboutSection>
+      </C.AboutSection> */}
 
       <Snackbar
         open={alertInfo}
