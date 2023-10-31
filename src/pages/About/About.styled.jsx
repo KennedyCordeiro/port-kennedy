@@ -70,7 +70,7 @@ export const DivTitle = styled.div`
 `;
 
 export const Title = styled.p`
-  font-size: 70px;
+  font-size: 65px;
   margin-bottom: 10px;
   display: flex;
   margin-top: 10px;
@@ -137,8 +137,8 @@ export const LineSeparator = styled.img`
   position: absolute;
   object-fit: contain;
   left: 50%;
-  top: 20%;
-  height: 70%;
+  top: 7%;
+  height: 80%;
 
   @media screen and (max-width: 1600px) {
     margin-top: 4em;
@@ -181,6 +181,7 @@ export const TextDescription = styled.div`
   font-size: 1.1em;
   display: flex;
   flex-wrap: wrap;
+  width: 45%;
   font-family: "Montserrat", sans-serif;
   color: #3b3b3b;
   padding: 2rem;
@@ -188,7 +189,8 @@ export const TextDescription = styled.div`
 
 export const TittleSummaryActive = styled(TittleSummary)`
   font-size: 40px;
-
+  font-family: Joker One, sans-serif;
+  width: 45%;
   @media screen and (max-width: 600px) {
     font-size: 30px;
   }
@@ -265,6 +267,7 @@ export const Skill = styled.div`
 export const DivSkills = styled.div`
   flex-direction: row;
   display: flex;
+  width: 45%;
   flex-wrap: wrap;
   padding: 2rem;
   margin-bottom: 4em;
@@ -272,8 +275,7 @@ export const DivSkills = styled.div`
 
 export const SectionItem = styled.div`
   display: flex;
-  flex: 1;
-  height: 100%;
+  width: 100%;
   flex-direction: column;
 `;
 
@@ -281,9 +283,9 @@ export const Icon = styled.div`
   width: 40px;
   height: 40px;
   display: flex;
-  left: 49%;
+  left: 49.1%;
   border-radius: 50px;
-  background-color: #282b3c;
+  border: 2.5px solid #282b3c;
   position: absolute;
   justify-content: center;
   align-items: center;
@@ -297,8 +299,6 @@ export const Icon = styled.div`
   }
 
   @media screen and (max-width: 1600px) {
-    left: 49%;
-    margin-top: 3em;
     width: 32px;
     height: 32px;
   }
@@ -308,16 +308,15 @@ export const Icon = styled.div`
     width: 20px;
     height: 20px;
     left: 8.5%;
-    margin-top: 7%;
   }
 `;
 
 export const Icon1 = styled(Icon)`
-  top: 30%;
+  top: 8%;
 `;
 
 export const Icon2 = styled(Icon)`
-  top: 45%;
+  top: 31.5%;
 `;
 
 export const Icon3 = styled(Icon)`
@@ -345,10 +344,12 @@ export const DivTitleIcon = styled.div`
   display: flex;
   position: absolute;
   cursor: pointer;
+
   @media screen and (max-width: 1550px) {
     font-size: 1.2rem;
     margin-top: 2.5em;
   }
+
   @media screen and (max-width: 600px) {
     display: flex;
     font-size: 1em;
@@ -374,4 +375,11 @@ export const MobileContent = styled.div`
   width: 100%;
   background-color: red;
   font-family: "Raleway", sans-serif;
+`;
+
+export const IconDetail = styled.div`
+  width: 50%;
+  height: 50%;
+  background-color: #282b3c;
+  border-radius: 50%;
 `;

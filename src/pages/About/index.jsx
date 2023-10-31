@@ -141,51 +141,48 @@ const About = () => {
   return (
     <C.Container>
       <C.DivTitle>
-        <C.Title onClick={handleInfo}>About</C.Title>
+        <C.Title onClick={handleInfo}>Experiência</C.Title>
       </C.DivTitle>
       <C.SeparatorImg src={Separator} />
       <C.AboutSection>
-        <C.SectionSummary>
-          <C.TittleSummary style={{ textAlign: "initial" }}>
-            Experiência
-          </C.TittleSummary>
-          <C.TextSummary>
-            {" "}
-            Com duas experiências sólidas em desenvolvimento Full Stack e como
-            desenvolvedor Front-End busco estar sempre acompanhando as melhores
-            tecnologias do mercado para aplicar em meus projetos, e com isso me
-            tornar um profissional cada vez melhor.{" "}
-          </C.TextSummary>
-        </C.SectionSummary>
         <C.LineSeparator src={Line} className="Line" />
         <C.SectionSummary>
           {!activeSection &&
             icons.map((icon, index) => (
               <div key={index} className={`icon-section-hidden icon-${index}`}>
-                <icon.sectionIcon onClick={() => handleIcon(icon)} />
-                <icon.titleSection onClick={() => handleIcon(icon)}>
-                  {icon.title}
-                </icon.titleSection>
+                <icon.sectionIcon onClick={() => handleIcon(icon)}>
+                  <C.IconDetail />
+                </icon.sectionIcon>
+                <C.SectionItem
+                  style={
+                    index % 2 == 0
+                      ? { alignItems: "end" }
+                      : { alignItems: "flex-start" }
+                  }
+                >
+                  <C.TittleSummaryActive
+                    style={
+                      index % 2 == 0
+                        ? { justifyContent: "flex-start" }
+                        : { justifyContent: "flex-end" }
+                    }
+                  >
+                    {icon.title}
+                  </C.TittleSummaryActive>
+                  <C.TextDescription>{icon.description}</C.TextDescription>
+                  <C.DivSkills>
+                    {icon.skills &&
+                      icon.skills.map((skill, index) => (
+                        <C.Skill key={index} className={icon.topic}>
+                          {skill}
+                        </C.Skill>
+                      ))}
+                  </C.DivSkills>
+                </C.SectionItem>
               </div>
             ))}
 
-          {activeSection && (
-            <>
-              <C.TittleSummaryActive>
-                {activeSection.title}
-                <MenuClose HandleMenu={handleCloseSection} />
-              </C.TittleSummaryActive>
-              <C.TextDescription>{activeSection.description}</C.TextDescription>
-              <C.DivSkills>
-                {activeSection.skills &&
-                  activeSection.skills.map((skill, index) => (
-                    <C.Skill key={index} className={activeSection.topic}>
-                      {skill}
-                    </C.Skill>
-                  ))}
-              </C.DivSkills>
-            </>
-          )}
+          {activeSection && <></>}
         </C.SectionSummary>
       </C.AboutSection>
 

@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  min-height: 100vh; /* Altere a altura para 100vh para cobrir toda a altura da página */
+  min-height: 100vh;
   display: flex;
   justify-content: space-between;
   background-color: #d7d7d7;
@@ -13,7 +13,7 @@ export const Container = styled.div`
   background-position: right;
   background-repeat: no-repeat;
   background-origin: initial;
-  background-size: 60% auto;
+  background-size: 60%;
   object-fit: cover;
   flex-direction: column;
   align-items: end;
