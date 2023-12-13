@@ -46,9 +46,9 @@ export const DivTitle = styled.div`
   width: 500px;
   height: 80px;
   margin: 20px 0 40px 0;
-  border: 1px solid;
+  border: 1px solid #3b3b3b;
   border-radius: 20% 0 20% 0;
-  border-color: #3b3b3b;
+
   flex-direction: column;
   align-items: center;
   display: flex;

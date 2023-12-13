@@ -1,114 +1,5 @@
 import styled, { keyframes } from "styled-components";
 
-const mainBlock = keyframes`
-  0% {
-    width: 0;
-    left: 0;
-  }
-  50% {
-    width: 100%;
-    left: 0;
-  }
-  100% {
-    width: 0;
-    left: 100%;
-  }
-`;
-
-const secBlock = keyframes`
-  0% {
-    width: 0;
-    left: 0;
-  }
-  50% {
-    width: 100%;
-    left: 0;
-  }
-  100% {
-    width: 0;
-    left: 100%;
-  }
-`;
-
-const mainFadeIn = keyframes`
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-`;
-
-const popIn = keyframes`
-  0% {
-    width: 0px;
-    height: 0px;
-    background: #d7d7d7;
-    border: 0px solid #ddd;
-    opacity: 0;
-  }
-  50% {
-    width: 10px;
-    height: 10px;
-    background: #d7d7d7;
-    opacity: 1;
-    bottom: 45px;
-  }
-  65% {
-    width: 7px;
-    height: 7px;
-    bottom: 0px;
-    width: 15px;
-  }
-  80% {
-    width: 10px;
-    height: 10px;
-    bottom: 20px;
-  }
-  100% {
-    width: 7px;
-    height: 7px;
-    background: #d7d7d7;
-    border: 0px solid #222;
-    bottom: 13px;
-  }
-`;
-
-const secFadeIn = keyframes`
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.5;
-  }
-`;
-
-const top = keyframes`
-  0% {
-    opacity: 0;
-    bottom: -80px;
-  }
-  100% {
-    opacity: 1;
-    bottom: 0px;
-  }
-`;
-
-const icon = keyframes`
-  0% {
-    opacity: 0;
-    transform: scale(0.0);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.3) rotate(-02deg);
-  }
-  100% {
-    opacity: 1;
-    bottom: 0px;
-  }
-`;
-
 export const BannerContent = styled.div`
   top: 0;
   display: flex;
@@ -148,10 +39,38 @@ export const BannerH3 = styled.h3`
   opacity: 0.7;
 `;
 
+const trackingContract = keyframes`
+0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+
+`;
+
+const trackingExpand = keyframes`
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }`;
+
 export const Profile = styled.a`
-  font-size: 75px;
+  font-size: 4.8rem;
   margin-top: 15px;
   font-weight: bold;
+  animation: ${trackingContract} 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 
   @media screen and (max-width: 1600px) {
     font-size: 60px;
@@ -173,7 +92,7 @@ export const Profile2 = styled.div`
 export const TxtRotate = styled.div`
   display: flex;
   width: fit-content;
-  font-size: 1.3em;
+  font-size: 1.6em;
   color: #909090;
 `;
 

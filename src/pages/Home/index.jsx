@@ -19,7 +19,7 @@ const Home = () => {
             <ImagePerfil></ImagePerfil>
           </C.ImagePerfilDiv>
           <C.Itens>
-            <Header></Header>
+            <Header />
             <ButtonCur onClickButton={DownloadCurriculum} text="Acessar CV" />
             <C.NavIconsDiv>
               <NavIcons></NavIcons>
